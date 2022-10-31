@@ -1,0 +1,28 @@
+#icon1 {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  width: 116px;
+  height: 30px;
+  background-color: transparent;
+  color: #efc340;
+  border: none;
+  margin-left: 0px;
+  border-right: 3px solid white;
+}
+
+.search_input::placeholder {
+  color: #efc340;
+  padding-left: 130px;
+  animation-name: blink;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center !important;
+  justify-content: center !important;
+}

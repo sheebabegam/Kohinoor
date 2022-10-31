@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar_sub from "./components/Header/SubNav/Navbar_sub";
+import { Route, Routes } from "react-router-dom";
+import Store_Locator from "./components/Header/Pages/Store_Locator";
+import MainNav from "./components/Header/MainNav/MainNav";
+import Mid_Page from "./components/Mid_Page";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar_sub />
+      <MainNav />
+      <Mid_Page />
+      <Routes>
+        <Route path="/store-locator" element={<Store_Locator />} />
+      </Routes>
     </div>
   );
 }

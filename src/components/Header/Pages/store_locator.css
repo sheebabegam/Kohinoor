@@ -1,0 +1,62 @@
+.main_map_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.store_div {
+  z-index: 1;
+  background-color: white;
+  height: 644px;
+  left: 50px;
+  overflow: hidden;
+  position: absolute;
+  top: 192px;
+  width: 17%;
+}
+
+.video_frame {
+  position: relative;
+  z-index: 0;
+}
+
+.locate_store {
+  margin-top: 30px;
+}
+
+.pincode_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter_pin_input {
+  display: block;
+  width: 80%;
+  padding: 14px 40px 14px 16px;
+  background-color: #f4f4f5;
+  font-size: 0.77778rem;
+  border-color: #f4f4f5;
+  letter-spacing: 1px;
+  margin-top: 17px;
+}
+
+.find_now {
+  background: #0061e0;
+  color: #fff;
+  border-color: #0061e0;
+  margin-top: 30px;
+  margin-left: 2px;
+  width: 80%;
+  padding: 12px;
+  font-size: 0.88889rem;
+  font-weight: 700;
+  border-width: 2px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.stores16 {
+  margin-top: 15px;
+}
