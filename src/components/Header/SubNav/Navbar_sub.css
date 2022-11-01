@@ -3,6 +3,11 @@
   justify-content: flex-end !important;
 } */
 
+.nav_sub {
+  background-color: #0061e0 !important;
+  height: 35px;
+}
+
 .nav_right_align.container {
   display: flex !important;
   justify-content: flex-end !important;

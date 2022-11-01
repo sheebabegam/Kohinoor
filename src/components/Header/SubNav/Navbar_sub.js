@@ -7,7 +7,7 @@ import map_png from "../../../assets/images/map_png.png";
 function Navbar_sub() {
   return (
     <>
-      <Navbar bg="primary" variant="dark">
+      <Navbar variant="dark" sticky="top" className="nav_sub">
         <Container className="nav_right_align">
           <Nav className="ml-auto">
             <ul>

@@ -11,7 +11,7 @@ import search_ic from "../../../assets/images/search_ic.png";
 
 function MainNav() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container fluid>
         <Navbar.Brand href="#home">
           <img
