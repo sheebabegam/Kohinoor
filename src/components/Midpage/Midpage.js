@@ -6,6 +6,9 @@ import headphones from "../../assets/headphones.json";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
+import heart from "../../assets/images/heart.svg";
 
 function Midpage() {
   const responsive = {
@@ -156,6 +159,39 @@ function Midpage() {
             </Nav.Link>
           </Container>
         </Navbar>
+
+        <div>
+          <Card
+            style={{ width: "18rem", marginLeft: "100px", marginTop: "100px" }}
+          >
+            <div className="heart_round">
+              <img src={heart} alt="favorite_icon" className="heart" />
+            </div>
+
+            <Card.Img
+              variant="top"
+              src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/New_Project_-_2021-03-04T101104.251.png"
+              className="image_offer"
+            />
+            <Card.Body>
+              <Card.Text>
+                Daikin 1.0 Ton 3 Star Inverter Split AC (CTKL35TV16, Copper
+                Condenser, White)
+              </Card.Text>
+              <Card.Text>Joy Price &#8377;</Card.Text>
+              <Card.Text>
+                {" "}
+                &#8377; 31500 <label>34% off</label>
+              </Card.Text>
+              <Card.Text>MRP &#8377; 48200</Card.Text>
+            </Card.Body>
+
+            <Card.Body>
+              <Card.Link href="#">Compare</Card.Link>
+              <Card.Link href="#">Out Of Stock</Card.Link>
+            </Card.Body>
+          </Card>
+        </div>
       </div>
     </div>
   );
