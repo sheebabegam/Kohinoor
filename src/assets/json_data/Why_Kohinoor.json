@@ -1,0 +1,38 @@
+[
+  {
+    "img": "https://www.kohinoorelectronics.com/static/assets/img/icons/coupon.svg",
+    "tag1": "Best Offers",
+    "tag2": "& Prices",
+    "alt": "Services"
+  },
+  {
+    "img": "https://www.kohinoorelectronics.com/static/assets/img/icons/payment-method.svg",
+    "tag1": "Multiple Payment Modes",
+    "tag2": "",
+    "alt": "Payment Mode"
+  },
+  {
+    "img": "https://www.kohinoorelectronics.com/static/assets/img/icons/delivery.svg",
+    "tag1": "Scheduled Delivery & Easy Installations",
+    "tag2": "",
+    "alt": "Delivery"
+  },
+  {
+    "img": "https://www.kohinoorelectronics.com/static/assets/img/icons/exchange.svg",
+    "tag1": "No Cost EMI & Exchange Offers",
+    "tag2": "",
+    "alt": "No Cost EMI"
+  },
+  {
+    "img": "https://www.kohinoorelectronics.com/static/assets/img/icons/agreement.svg",
+    "tag1": "Exceptional",
+    "tag2": "Service",
+    "alt": "Exceptional Service"
+  },
+  {
+    "img": "https://www.kohinoorelectronics.com/static/assets/img/icons/warranty.svg",
+    "tag1": "Multiple Extended Warranty Plans",
+    "tag2": "",
+    "alt": "Extended Warranty"
+  }
+]

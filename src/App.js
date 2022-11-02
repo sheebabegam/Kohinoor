@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Store_Locator from "./components/Header/Pages/Store_Locator";
 import MainNav from "./components/Header/MainNav/MainNav";
 import Midpage from "./components/Midpage/Midpage";
+import "./App.css";
 
 function App() {
   return (
