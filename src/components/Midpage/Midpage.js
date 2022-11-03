@@ -20,6 +20,7 @@ import Microwaves from "../../assets/json_data/Microwaves.json";
 import Soundbar from "../../assets/json_data/Soundbar.json";
 import Recently_Viewed from "../../assets/json_data/Recently_Viewed.json";
 import Why_Kohinoor from "../../assets/json_data/Why_Kohinoor.json";
+import Footer from "../Footer/Footer";
 
 function Midpage() {
   const responsive = {
@@ -756,6 +757,10 @@ function Midpage() {
             </Carousel>
           </div>
         </div>
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   );
