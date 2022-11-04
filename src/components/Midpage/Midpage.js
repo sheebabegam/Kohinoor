@@ -21,6 +21,9 @@ import Soundbar from "../../assets/json_data/Soundbar.json";
 import Recently_Viewed from "../../assets/json_data/Recently_Viewed.json";
 import Why_Kohinoor from "../../assets/json_data/Why_Kohinoor.json";
 import Footer from "../Footer/Footer";
+import Brands_Carousel from "../../assets/json_data/Brands_Carousel.json";
+import Top_brands from "../../assets/json_data/Top_brands.json";
+import Accessories_Carousel from "./Accessories_Carousel";
 
 function Midpage() {
   const responsive = {
@@ -68,75 +71,25 @@ function Midpage() {
         <MainCarousel />
       </div>
 
-      <div className="slider_icon_div">
-        <div className="slider_carousel_div">
-          <Carousel responsive={responsive}>
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/headphones_lIOg7eq_T3Qatvg.png"
-                alt="air-constioner"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Headphones</h4>
-            </div>
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/air-conditioner_mtKMV9K.png"
-                alt="air-constioner"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Air Conditioner</h4>
-            </div>
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/Gamezone_icon_IvZTNCn.png"
-                alt="air-condtioner"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Game Zone</h4>
-            </div>
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/computer_HVOgFY3.png"
-                alt="computers"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Computers</h4>
-            </div>
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/appliances_rcgkYal.png"
-                alt="Home-appliances"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Home Appliances</h4>
-            </div>
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/Electronics_icon_wrMaWjZ.png"
-                alt="home-entertainment"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Home Entertainment</h4>
-            </div>
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/smartphone_qojgxKp.png"
-                alt="smartphones"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Smart Phone</h4>
-            </div>
-
-            <div>
-              <img
-                src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/tablet_Fsdm56f.png"
-                alt="Tablets"
-                className="slider_carousel"
-              />
-              <h4 className="h4">Tablets</h4>
-            </div>
-          </Carousel>
+      <div className="slider_icon_div ">
+        <div
+          className="slider_carousel_div container"
+          style={{ overflowX: "hidden" }}
+        >
+          <Container>
+            <Carousel responsive={responsive}>
+              {Brands_Carousel.map((image, i) => (
+                <div className="carousel_width d-flex justify-content-center align-items-center flex-column">
+                  <img
+                    src={image.img}
+                    alt="brands"
+                    className="slider_carousel"
+                  />
+                  <h4 className="h4">Headphones</h4>
+                </div>
+              ))}
+            </Carousel>
+          </Container>
         </div>
         <div className="ad_div">
           <div className="first_ad">
@@ -180,554 +133,26 @@ function Midpage() {
       </div>
 
       <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              New Arrivals
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Nav.Link href="#" className="new_arrival_bar">
-              Trending
-            </Nav.Link>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {New_Arrivals.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
+        <Accessories_Carousel />
       </div>
 
       <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Laptops
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">Trending</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {laptops.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
+        <Container className="iframe_div">
+          <iframe
+            src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/images/home_videos/SAMPLE-3_2.jpg"
+            width="100%"
+            height="710px"
+            scrolling="no"
+          ></iframe>
 
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Accessories
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {Accessories.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Televisions
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {Televisions.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Air Conditioner
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {Air_Conditioner.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Washing Machine
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {Washing_Machine.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Microwave
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {Microwaves.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Soundbar
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {Soundbar.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              Recently Viewed
-            </Nav.Link>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
-          </Container>
-        </Navbar>
-        <div className="wrap_div">
-          <Carousel responsive={responsive_card}>
-            {Recently_Viewed.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
-                    </div>
-                  </div>
-
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
-                      </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
-
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-        </div>
+          <div className="iframe_sidenav">
+            <Button className="iframe_button">APPLE</Button>
+            <Button className="iframe_button">KTV</Button>
+            <Button className="iframe_button">SAMSUNG</Button>
+            <Button className="iframe_button">JBL</Button>
+            <Button className="iframe_button">One Plus</Button>
+          </div>
+        </Container>
       </div>
 
       <div className="why_kohinoor_div">
@@ -758,6 +183,22 @@ function Midpage() {
           </div>
         </div>
       </div>
+
+      <Container className="top_brands_div">
+        <div className="top_brands_text">
+          <h2>Top Brands</h2>
+        </div>
+
+        <div className="wrap_div">
+          <Carousel responsive={responsive_card}>
+            {Top_brands.map((brand, i) => (
+              <div className="top_brand_img" key={i}>
+                <img src={brand.img} alt="Top_brand" className="img_div" />
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </Container>
 
       <div>
         <Footer />

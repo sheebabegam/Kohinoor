@@ -99,7 +99,7 @@
 }
 
 .first_footer_section_div {
-  width: 25%;
+  /* width: 25%; */
   padding: 0px 1.5rem;
 }
 
@@ -125,7 +125,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  /* width: 60%; */
 }
 
 .social_img {
@@ -155,11 +155,6 @@
   line-height: 2;
 }
 
-.sub_div_footer {
-  display: flex;
-  align-items: center;
-}
-
 .third_div {
   color: #fed700;
   list-style: none;
@@ -173,4 +168,8 @@
 .fifth_div {
   color: #fed700;
   list-style: none;
+}
+
+.news_letter_para {
+  margin-left: 30px;
 }
