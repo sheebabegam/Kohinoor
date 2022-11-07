@@ -24,8 +24,15 @@ import Footer from "../Footer/Footer";
 import Brands_Carousel from "../../assets/json_data/Brands_Carousel.json";
 import Top_brands from "../../assets/json_data/Top_brands.json";
 import Accessories_Carousel from "./Accessories_Carousel";
+import Videos from "../../assets/json_data/Videos.json";
+import React, { useState } from "react";
+import Video_Carousel from "./Video_Carousel";
 
 function Midpage() {
+  const [value, setValue] = useState("Kohinoor");
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -65,6 +72,7 @@ function Midpage() {
       items: 1,
     },
   };
+
   return (
     <div>
       <div>
@@ -136,23 +144,9 @@ function Midpage() {
         <Accessories_Carousel />
       </div>
 
+      {/* ,,,,,,,,,,,,,,,,,,, */}
       <div>
-        <Container className="iframe_div">
-          <iframe
-            src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/images/home_videos/SAMPLE-3_2.jpg"
-            width="100%"
-            height="710px"
-            scrolling="no"
-          ></iframe>
-
-          <div className="iframe_sidenav">
-            <Button className="iframe_button">APPLE</Button>
-            <Button className="iframe_button">KTV</Button>
-            <Button className="iframe_button">SAMSUNG</Button>
-            <Button className="iframe_button">JBL</Button>
-            <Button className="iframe_button">One Plus</Button>
-          </div>
-        </Container>
+        <Video_Carousel />
       </div>
 
       <div className="why_kohinoor_div">
@@ -169,7 +163,7 @@ function Midpage() {
           <div className="slider_carousel_div">
             <Carousel responsive={responsive}>
               {Why_Kohinoor.map((data, i) => (
-                <div key={i}>
+                <div key={i} className="gray_scale">
                   <img
                     src={data.img}
                     alt={data.alt}
@@ -198,7 +192,21 @@ function Midpage() {
             ))}
           </Carousel>
         </div>
+        <div className="yellow_btn_div">
+          <Button className="yellow_img_btn">View All</Button>
+        </div>
       </Container>
+
+      {/* <div> */}
+      <Container>
+        <img
+          src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/images/static_banner/101.png"
+          alt="image"
+          className="yellow_img container"
+        />
+      </Container>
+      <br />
+      {/* </div> */}
 
       <div>
         <Footer />

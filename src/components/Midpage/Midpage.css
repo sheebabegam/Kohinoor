@@ -2,6 +2,23 @@
   height: 80px !important;
 }
 
+.slider_carousel:hover {
+  filter: grayscale(1);
+}
+
+.gray_scale:hover {
+  filter: grayscale(1);
+  width: fit-content;
+}
+
+li.react-multi-carousel-item.react-multi-carousel-item--active {
+  border-right: 1px solid white;
+}
+
+/* .gray_scale {
+  border-right: 1px solid white;
+} */
+
 .slider_icon_div {
   position: relative;
   background-color: black;
@@ -130,11 +147,11 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   margin: 25px 20px;
 }
 
-.new_arrival_bar {
+.new_arrival_bar1 {
   font-size: 25px;
 }
 
-.new_arrival_bar:active {
+.new_arrival_bar1:active {
   color: white !important;
   background: 0 0;
   font-weight: 600;
@@ -143,9 +160,25 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   border-radius: 0;
 }
 
-a.new_arrival_bar.nav-link:hover {
+a.new_arrival_bar1.nav-link:hover {
   border-bottom-style: solid;
 }
+
+.new_arrival_bar {
+  font-size: 25px;
+}
+
+/* .new_arrival_bar:active {
+  color: white !important;
+  background: 0 0;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-radius: 0;
+}
+
+a.new_arrival_bar.nav-link:hover {
+  border-bottom-style: solid;
+} */
 
 .image_offer {
   height: 200px;
@@ -401,12 +434,14 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
 }
 
 .iframe_sidenav {
-  width: 250px;
+  width: 220px;
   background-color: black;
-  height: 710px;
+  height: 659px;
+  margin-top: -8px;
 }
 
 .iframe_button {
@@ -417,3 +452,53 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   background-color: black;
   height: 80px;
 }
+
+.yellow_img {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  height: 180px;
+  /* width: 1200px; */
+}
+
+.container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center !important;
+  justify-content: space-around !important;
+}
+
+.new_arrival_bar_button {
+  background-color: transparent !important;
+  color: #efc340 !important;
+  border-radius: 15px !important;
+  font-size: 25px;
+  border: 1px solid #efc340;
+  font-weight: 600;
+  border: 2px solid !important;
+  font-size: 16px;
+  padding: 0.25rem 1rem;
+  line-height: 22px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  height: 32px;
+}
+
+.yellow_img_btn {
+  border-radius: 20px;
+  font-weight: 600;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  color: black;
+  border: 2px solid #fed700;
+  background-color: transparent !important;
+}
+
+.yellow_btn_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video Carousel */

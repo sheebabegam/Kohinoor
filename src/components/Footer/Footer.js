@@ -19,7 +19,11 @@ function Footer() {
     <div>
       <Navbar variant="dark" expand="lg" className="news_letter">
         <Container fluid className="subscribe_bar ">
-          <Navbar.Brand href="#home" className="subscribe ">
+          <Navbar.Brand
+            href="#home"
+            className="subscribe "
+            style={{ display: "flex" }}
+          >
             <div className="subscribe_logo_div">
               <img
                 src={subscribe}

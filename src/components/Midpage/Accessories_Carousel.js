@@ -45,12 +45,10 @@ function Accessories_Carousel() {
     <div>
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
-            <Nav.Link href="#" className="new_arrival_bar">
-              New Arrivals
-            </Nav.Link>
+          <Container fluid className="new_arrival_bar_trend">
+            <Nav.Link className="new_arrival_bar1">New Arrivals</Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Nav.Link href="#" className="new_arrival_bar">
+            <Nav.Link href="#" className="new_arrival_bar1">
               Trending
             </Nav.Link>
           </Container>
@@ -113,7 +111,7 @@ function Accessories_Carousel() {
               Laptops
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">Trending</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">
@@ -174,7 +172,7 @@ function Accessories_Carousel() {
               Accessories
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">
@@ -235,7 +233,7 @@ function Accessories_Carousel() {
               Televisions
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">
@@ -296,7 +294,7 @@ function Accessories_Carousel() {
               Air Conditioner
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">
@@ -357,7 +355,7 @@ function Accessories_Carousel() {
               Washing Machine
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">
@@ -418,7 +416,7 @@ function Accessories_Carousel() {
               Microwave
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">
@@ -479,7 +477,7 @@ function Accessories_Carousel() {
               Soundbar
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">
@@ -540,7 +538,7 @@ function Accessories_Carousel() {
               Recently Viewed
             </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Button className="new_arrival_bar">View All</Button>
+            <Button className="new_arrival_bar_button">View All</Button>
           </Container>
         </Navbar>
         <div className="wrap_div">

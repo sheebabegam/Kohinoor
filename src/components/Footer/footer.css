@@ -66,6 +66,7 @@
   padding: 7px 30px;
   font-weight: 500;
   background: #fed700;
+  border: none;
 }
 
 .search_newsletter {
@@ -75,6 +76,7 @@
   font-weight: 400;
   padding: 0 20px;
   font-size: 15px;
+  border: none;
 }
 
 .subscribe_bar {
@@ -171,5 +173,5 @@
 }
 
 .news_letter_para {
-  margin-left: 30px;
+  margin-top: 10px;
 }
