@@ -1,8 +1,8 @@
-body {
+/* body {
   font-family: Roboto;
   background: grey;
   text-align: center;
-}
+} */
 
 .carousel.carousel-slider {
   margin: 0px auto;
@@ -67,25 +67,6 @@ body {
   color: #ffff;
 }
 
-li.dot:nth-child(1):before {
-  content: "Apple";
-}
-
-li.dot:nth-child(2):before {
-  content: "KTV";
-}
-
-li.dot:nth-child(3):before {
-  content: "Samsung";
-}
-li.dot:nth-child(4):before {
-  content: "JBL";
-}
-
-li.dot:nth-child(5):before {
-  content: "Oneplus";
-}
-
 ul.control-dots {
   position: absolute;
   left: 100% !important;
@@ -107,4 +88,78 @@ ul.control-dots {
   filter: alpha(opacity=100);
   background: #1249a0 !important;
   color: #fff;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider {
+  -ms-box-orient: horizontal;
+  display: -moz-flex;
+  display: flex !important;
+}
+
+.carousel_sec_main {
+  width: 67% !important;
+  margin: auto !important;
+}
+
+.carousel_sec.carousel.slide .carousel-indicators {
+  top: 0 !important;
+}
+
+.carousel-indicators {
+  top: 0 !important;
+}
+
+.carousel_sec.carousel.slide .carousel-indicators {
+  position: absolute;
+  right: 0;
+  top: 0 !important;
+  left: 86.3% !important;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start !important;
+  padding: 0;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  list-style: none;
+  bottom: unset !important;
+  flex-direction: column;
+  background-color: #000 !important;
+  height: 99%;
+}
+
+.carousel_sec.carousel.slide .carousel-indicators button {
+  width: 175px !important;
+  height: 50px !important;
+  margin: 0 !important;
+  border-bottom: 1px solid gray;
+  position: relative;
+  text-indent: 0 !important;
+  border-top: 0 !important;
+  background-color: #000000;
+  color: #fff !important;
+}
+
+.carousel_sec.carousel.slide .carousel-indicators button.active {
+  background-color: #1249a0 !important;
+}
+
+.carousel_sec.carousel.slide .carousel-indicators button:nth-child(1):before {
+  content: "Apple";
+  color: #fff !important;
+}
+
+.carousel_sec.carousel.slide .carousel-indicators button:nth-child(2):before {
+  content: "KTV";
+}
+
+.carousel_sec.carousel.slide .carousel-indicators button:nth-child(3):before {
+  content: "Samsung";
+}
+.carousel_sec.carousel.slide .carousel-indicators button:nth-child(4):before {
+  content: "JBL";
+}
+
+.carousel_sec.carousel.slide .carousel-indicators button:nth-child(5):before {
+  content: "One plus";
 }

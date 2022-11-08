@@ -1,12 +1,24 @@
-import Carousel from "react-bootstrap/Carousel";
-import "./style.css";
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import "./Video_Caro.css";
 import Container from "react-bootstrap/Container";
 
-function Video_Carousel() {
+function Video_Caro() {
   return (
-    <div className="carousel_sec_main">
-      <Carousel className="carousel_sec" interval="5000000000">
-        <Carousel.Item>
+    <Container>
+      <h1>Carousel in React</h1>
+      <Carousel
+        showThumbs={true}
+        showStatus={false}
+        infiniteLoop
+        useKeyboardArrows
+        transitionTime={1000}
+        // axis="vertical"
+        // selectedItem={1}
+        width="600px"
+      >
+        <div className="slide-holder">
           <iframe
             width="1100px"
             height="659px"
@@ -16,8 +28,8 @@ function Video_Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </Carousel.Item>
-        <Carousel.Item>
+        </div>
+        <div className="slide-holder">
           <iframe
             width="1100px"
             height="659px"
@@ -27,8 +39,8 @@ function Video_Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </Carousel.Item>
-        <Carousel.Item>
+        </div>
+        <div className="slide-holder">
           <iframe
             width="1100px"
             height="659px"
@@ -38,8 +50,9 @@ function Video_Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </Carousel.Item>
-        <Carousel.Item>
+        </div>
+
+        <div className="slide-holder">
           <iframe
             width="1100px"
             height="659px"
@@ -49,8 +62,9 @@ function Video_Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </Carousel.Item>
-        <Carousel.Item>
+        </div>
+
+        <div className="slide-holder">
           <iframe
             width="1100px"
             height="659px"
@@ -60,10 +74,9 @@ function Video_Carousel() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </Carousel.Item>
+        </div>
       </Carousel>
-    </div>
+    </Container>
   );
 }
-
-export default Video_Carousel;
+export default Video_Caro;

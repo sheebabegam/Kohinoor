@@ -27,6 +27,8 @@ import Accessories_Carousel from "./Accessories_Carousel";
 import Videos from "../../assets/json_data/Videos.json";
 import React, { useState } from "react";
 import Video_Carousel from "./Video_Carousel";
+import Video_Caro from "./Video_Caro";
+import Click_Carousel from "./Click_Carousel";
 
 function Midpage() {
   const [value, setValue] = useState("Kohinoor");
@@ -147,6 +149,8 @@ function Midpage() {
       {/* ,,,,,,,,,,,,,,,,,,, */}
       <div>
         <Video_Carousel />
+        <Click_Carousel />
+        <Video_Caro />
       </div>
 
       <div className="why_kohinoor_div">
