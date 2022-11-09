@@ -20,6 +20,7 @@ import Washing_Machine from "../../assets/json_data/Washing_Machine.json";
 import Microwaves from "../../assets/json_data/Microwaves.json";
 import Soundbar from "../../assets/json_data/Soundbar.json";
 import Recently_Viewed from "../../assets/json_data/Recently_Viewed.json";
+import { Link } from "react-router-dom";
 
 function Accessories_Carousel() {
   const responsive_card = {
@@ -55,51 +56,66 @@ function Accessories_Carousel() {
         </Navbar>
         <div className="wrap_div">
           <Carousel responsive={responsive_card}>
-            {New_Arrivals.map((prod, i) => (
-              <div className="active_item_main_div" key={i}>
-                <Card className="main_card">
-                  <div className="heart_end">
-                    <div className="heart_round">
-                      <img src={heart} alt="favorite_icon" className="heart" />
+            {New_Arrivals.map((prod, i) => {
+              var product_link = prod.name.replace(/\s+/g, "-").toLowerCase();
+              product_link = product_link.replace(/[{()}]/g, "");
+              product_link = product_link.replace(/[{,}]/g, "");
+              console.log("PRODUCT NAME", product_link);
+              return (
+                <div className="active_item_main_div" key={i}>
+                  <Card className="main_card">
+                    <div className="heart_end">
+                      <div className="heart_round">
+                        <img
+                          src={heart}
+                          alt="favorite_icon"
+                          className="heart"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="card_img_div">
-                    <Card.Img
-                      variant="top"
-                      src={prod.img}
-                      className="image_offer"
-                    />
-                  </div>
-                  <Card.Body className="card_body">
-                    <div>
-                      <Card.Text className="card_text" id="product_name">
-                        {prod.name}
+                    <Link
+                      to={{ pathname: `/product/${prod?.id}/${product_link}` }}
+                      state={{ id: prod }}
+                    >
+                      <div className="card_img_div">
+                        <Card.Img
+                          variant="top"
+                          src={prod.img}
+                          className="image_offer"
+                        />
+                      </div>
+                    </Link>
+                    <Card.Body className="card_body">
+                      <div>
+                        <Card.Text className="card_text" id="product_name">
+                          {prod.name}
+                        </Card.Text>
+                        <Card.Text className="card_text" id="joy_price">
+                          Joy Price &#8377;
+                        </Card.Text>
+                        <Card.Text className="card_text" id="product_price">
+                          &#8377; {prod.price}{" "}
+                          <span className="offer_percent">{prod.offer}</span>
+                        </Card.Text>
+                      </div>
+                      <Card.Text className="card_text" id="mrp_small_text">
+                        MRP &#8377; {prod.mrp}
                       </Card.Text>
-                      <Card.Text className="card_text" id="joy_price">
-                        Joy Price &#8377;
-                      </Card.Text>
-                      <Card.Text className="card_text" id="product_price">
-                        &#8377; {prod.price}{" "}
-                        <span className="offer_percent">{prod.offer}</span>
-                      </Card.Text>
-                    </div>
-                    <Card.Text className="card_text" id="mrp_small_text">
-                      MRP &#8377; {prod.mrp}
-                    </Card.Text>
 
-                    <div id="card_footer" className="card_text">
-                      <Card.Text href="#" className="product_footer_item">
-                        Compare
-                      </Card.Text>
-                      <Card.Text href="#" className="text_danger">
-                        Out Of Stock
-                      </Card.Text>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
+                      <div id="card_footer" className="card_text">
+                        <Card.Text href="#" className="product_footer_item">
+                          Compare
+                        </Card.Text>
+                        <Card.Text href="#" className="text_danger">
+                          Out Of Stock
+                        </Card.Text>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </div>
+              );
+            })}
           </Carousel>
         </div>
       </div>

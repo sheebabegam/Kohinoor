@@ -1,11 +1,17 @@
 import Navbar_sub from "./components/Header/SubNav/Navbar_sub";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Store_Locator from "./components/Header/Pages/Store_Locator";
 import MainNav from "./components/Header/MainNav/MainNav";
 import Midpage from "./components/Midpage/Midpage";
 import "./App.css";
+import Product_Details from "./components/Pages/Product_Details";
+import { useLocation } from "react-router-dom";
 
-function App() {
+function App(props) {
+  console.log("PROPS -->", props);
+  const location = useLocation();
+
   return (
     <div className="App">
       <Navbar_sub />
@@ -13,6 +19,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Midpage />} />
         <Route path="/store-locator" element={<Store_Locator />} />
+        <Route
+          path={`/product/:productId/:product_name`}
+          element={<Product_Details />}
+        />
       </Routes>
     </div>
   );

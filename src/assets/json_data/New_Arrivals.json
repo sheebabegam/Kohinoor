@@ -1,5 +1,6 @@
 [
   {
+    "id": 1538,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/IMAGE-1_0DWw13c.jpg",
     "name": "Hitachi 1 Ton 3 Star Split Inverter Air Conditioner (RAPG312HFEOZ1)",
     "price": 31500,
@@ -7,6 +8,7 @@
     "mrp": 48200
   },
   {
+    "id": 1283,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/c8582e04-57ee-4b95-bd5d-4196da05ff4b_1.png",
     "name": "Samsung QA55QN85A 55 inch (139 cm) QN85A NEO QLED 4K Smart TV (2021)",
     "price": 148990,
@@ -14,6 +16,7 @@
     "mrp": 192900
   },
   {
+    "id": 303,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/New_Project_-_2021-03-04T101104.251.png",
     "name": "Daikin 1.0 Ton 3 Star Inverter Split AC (CTKL35TV16, Copper Condenser, White)",
     "price": 31790,
@@ -21,6 +24,7 @@
     "mrp": 44400
   },
   {
+    "id": 68,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/7_L6ePHzr_5_3.png",
     "name": "Bosch WAJ24262IN 7.0Kg Fully Automatic Washing Machine (Silver)",
     "price": 35900,
@@ -28,6 +32,7 @@
     "mrp": 46990
   },
   {
+    "id": 1103,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/WAJ2446SIN_6.png",
     "name": "LG MWO MJEN286UF",
     "price": 18700,
@@ -35,6 +40,7 @@
     "mrp": 25999
   },
   {
+    "id": 1386,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/New_Project_-_2021-12-02T135133.704.png",
     "name": "Whirlpool 6.5 kg 5 Star Fully-Automatic Top Loading Washing Machine with In-Built Heater (STAINWASH ULTRA 6.5, Grey) SWULTRA6.5SCGREY",
     "price": 20400,
@@ -42,6 +48,7 @@
     "mrp": 24400
   },
   {
+    "id": 384,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/New_Project_-_2021-03-05T130231_13_Vy3GO3x.png",
     "name": "O General 1.5 Ton 3 Star Inverter Split AC (RASGG18CPTA-B, Copper Condenser, White)",
     "price": 47000,
@@ -49,6 +56,7 @@
     "mrp": 51940
   },
   {
+    "id": 147,
     "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/209x209/images/WA70N4261SS.png",
     "name": "Samsung 7.0 Kg Inverter 5 star Fully-Automatic Top Loading Washing Machine (WA70N4261SS/TL, Imperial Silver, Wobble Technology)",
     "price": 24200,
