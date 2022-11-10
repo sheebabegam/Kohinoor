@@ -31,7 +31,8 @@ export const hitachi_price = [
     prod_mrp: "25999",
     prod_joy_price: "18700",
     prod_you_save: "7299(28%)",
-    prod_delivery_time: "Nov 12 to Nov 14",
+    prod_delivery_time_from: "Nov 12 ",
+    prod_delivery_time_to: "Nov 14",
   },
 ];
 

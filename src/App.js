@@ -5,7 +5,7 @@ import Store_Locator from "./components/Header/Pages/Store_Locator";
 import MainNav from "./components/Header/MainNav/MainNav";
 import Midpage from "./components/Midpage/Midpage";
 import "./App.css";
-import Product_Details from "./components/Pages/Product_Details";
+import Product_Details from "./components/Product_Page/Product_Details";
 import { useLocation } from "react-router-dom";
 
 function App(props) {
@@ -79,3 +79,25 @@ export default App;
 //     </div>
 //   );
 // }
+
+// import Table from "react-bootstrap/Table";
+
+// function BasicExample() {
+//   return (
+//     <Table>
+//       <tbody>
+//         <tr>
+//           <td>1</td>
+//         </tr>
+//         <tr>
+//           <td>2</td>
+//         </tr>
+//         <tr>
+//           <td>3</td>
+//         </tr>
+//       </tbody>
+//     </Table>
+//   );
+// }
+
+// export default BasicExample;

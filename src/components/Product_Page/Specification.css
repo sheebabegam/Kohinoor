@@ -1,0 +1,29 @@
+h4 {
+  font-size: 18px;
+  font-weight: 500 !important;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: -0.009rem;
+  color: #333e48;
+  text-align: left;
+  background-color: #fff;
+}
+
+h3 {
+  font-size: 1.00012rem;
+  font-weight: bolder !important;
+  line-height: 1.5;
+  color: #333e48;
+  text-align: left;
+  background-color: #fff;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: "Roboto Slab";
+  color: #878787 !important;
+  line-height: 1.7;
+  text-align: left;
+  background-color: #fff;
+}

@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs_div {
+  border: 1px solid #e7eaf3 !important;
+  box-shadow: 0 0 35px rgba(140, 152, 164, 0.125) !important;
+  border-radius: 1.063rem;
+  padding: 4rem 4.5rem !important;
+}
+
+.description_para {
+  color: #747474;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 1.875rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: left;
+  background-color: #fff;
+}
