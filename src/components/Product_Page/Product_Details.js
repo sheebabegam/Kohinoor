@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -19,11 +19,33 @@ import Table from "react-bootstrap/Table";
 import tags_solid from "../../assets/images/tags_solid.png";
 import share_icon from "../../assets/images/share_icon.png";
 import Tabs_Product_Page from "../Product_Page/Tabs_Product_Page";
+import ReactImageMagnify from "react-image-magnify";
 
 function Product_Details(props) {
+  const [id, setId] = useState();
+  const onChange = (e) => {
+    setId(e);
+  };
+  console.log(id);
   console.log("PROPS -->", props);
   const location = useLocation();
   console.log(location.state);
+
+  const imageProps = {
+    smallImage: {
+      alt: "Phasellus laoreet",
+      isFluidWidth: false,
+      width: 450,
+      height: 500,
+      src: { id },
+    },
+    largeImage: {
+      src: { id },
+      width: 1400,
+      height: 1800,
+    },
+    enlargedImageContainerStyle: { background: "#fff", zIndex: 9 },
+  };
   return (
     <div>
       <div>
@@ -44,12 +66,31 @@ function Product_Details(props) {
               <div className="prod_div_flex">
                 <div className="">
                   {hitachi_img.map((data, i) => (
-                    <div className="prod_img_div">
+                    <div
+                      className="prod_img_div"
+                      onClick={() => {
+                        onChange(data.img);
+                      }}
+                      style={{
+                        border: id === data.img && "1px solid black",
+                      }}
+                    >
                       <img src={data.img} alt="Image" className="prod_img" />
                     </div>
                   ))}
                 </div>
-                <div className="prod_zoom_img">Image</div>
+                <div className="prod_zoom_img">
+                  <img
+                    src={id}
+                    alt="Zoom_img"
+                    style={{ height: "100%", width: "100%" }}
+                  />
+                  <ReactImageMagnify
+                    src={id}
+                    {...imageProps}
+                    style={{ marginRight: 60, width: 1500 }}
+                  />
+                </div>
               </div>
             </Col>
             <Col xs={5}>

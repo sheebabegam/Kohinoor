@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: -1px;
+  border-width: 2px;
+  /* padding: 0.5rem 0.3rem; */
+  font-size: 1.125rem;
+  color: #343f49 !important;
 }
 
 .tabs_div {

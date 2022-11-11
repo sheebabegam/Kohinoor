@@ -1,6 +1,7 @@
 .prod_img_div {
   height: 100px;
   width: 100px;
+  margin-bottom: 10px;
 }
 
 .prod_img_div:hover {
