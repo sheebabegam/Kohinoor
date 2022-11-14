@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import {
@@ -12,6 +12,7 @@ import {
   hitachi_offer_details,
   hitachi_notes,
   hitachi_key_features,
+  path,
 } from "../../assets/json_data/Hitachi";
 import "./Product_Details.css";
 import truck from "../../assets/images/truck.png";
@@ -33,14 +34,14 @@ function Product_Details(props) {
 
   const imageProps = {
     smallImage: {
-      alt: "Phasellus laoreet",
+      alt: "Air conditioner",
       isFluidWidth: false,
-      width: 450,
-      height: 500,
-      src: { id },
+      width: 331,
+      height: 365,
+      src: id,
     },
     largeImage: {
-      src: { id },
+      src: id,
       width: 1400,
       height: 1800,
     },
@@ -49,12 +50,60 @@ function Product_Details(props) {
   return (
     <div>
       <div>
-        <Container fluid>
+        <Container>
           <Navbar bg="white" variant="dark" expand="lg">
-            <Nav.Link href="#">Home</Nav.Link>
+            {/* <Nav.Link href="#">Home</Nav.Link>
             <Nav.Link href="#">Air Conditioner</Nav.Link>
             <Nav.Link href="#">Split AC</Nav.Link>
-            <Nav.Link href="#">1.0 Ton</Nav.Link>
+            <Nav.Link href="#">1.0 Ton</Nav.Link> */}
+
+            {path.map((paths, i) => (
+              <div key={i}>
+                <Link
+                  to="/"
+                  className={
+                    location.pathname === "/"
+                      ? "breadcrumb-active"
+                      : "breadcrumb-not-active"
+                  }
+                >
+                  Home
+                </Link>
+                <span className="breadcrumb-arrow"> &gt; </span>
+                <Link
+                  to="/shop/air-conditioner"
+                  className={
+                    location.pathname.startsWith("/products")
+                      ? "breadcrumb-active"
+                      : "breadcrumb-not-active"
+                  }
+                >
+                  {paths.path1}
+                </Link>
+                <span className="breadcrumb-arrow"> &gt; </span>
+                <Link
+                  to="/shop/air-conditioner/split"
+                  className={
+                    location.pathname === "/products/1"
+                      ? "breadcrumb-active"
+                      : "breadcrumb-not-active"
+                  }
+                >
+                  {paths.path2}
+                </Link>
+                <span className="breadcrumb-arrow"> &gt; </span>
+                <Link
+                  to="/shop/air-conditioner/split/10-ton"
+                  className={
+                    location.pathname === "/products/1"
+                      ? "breadcrumb-active"
+                      : "breadcrumb-not-active"
+                  }
+                >
+                  {paths.path3}
+                </Link>
+              </div>
+            ))}
           </Navbar>
         </Container>
       </div>
@@ -80,15 +129,9 @@ function Product_Details(props) {
                   ))}
                 </div>
                 <div className="prod_zoom_img">
-                  <img
-                    src={id}
-                    alt="Zoom_img"
-                    style={{ height: "100%", width: "100%" }}
-                  />
                   <ReactImageMagnify
-                    src={id}
                     {...imageProps}
-                    style={{ marginRight: 60, width: 1500 }}
+                    style={{ marginRight: 60, width: 500 }}
                   />
                 </div>
               </div>

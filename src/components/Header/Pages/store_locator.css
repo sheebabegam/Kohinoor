@@ -33,7 +33,7 @@
 
 .enter_pin_input {
   display: block;
-  width: 80%;
+  width: 87%;
   padding: 14px 40px 14px 16px;
   background-color: #f4f4f5;
   font-size: 0.77778rem;
@@ -59,4 +59,12 @@
 
 .stores16 {
   margin-top: 15px;
+}
+
+h4.locate_store {
+  margin: 0 auto 15px;
+  font-size: 1.33333rem;
+  font-weight: 600 !important;
+  text-align: center;
+  margin-top: 30px;
 }
