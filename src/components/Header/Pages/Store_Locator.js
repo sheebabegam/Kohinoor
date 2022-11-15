@@ -23,6 +23,7 @@ function Store_Locator() {
     const iframeData = document.getElementById("iframeId");
     iframeData.src = `https://maps.google.com/maps?q=${long},${lat}&hl=es;&output=embed`;
   };
+
   return (
     <div className="main_map_div">
       <div className="store_div">
