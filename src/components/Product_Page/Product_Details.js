@@ -52,11 +52,6 @@ function Product_Details(props) {
       <div>
         <Container>
           <Navbar bg="white" variant="dark" expand="lg">
-            {/* <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Air Conditioner</Nav.Link>
-            <Nav.Link href="#">Split AC</Nav.Link>
-            <Nav.Link href="#">1.0 Ton</Nav.Link> */}
-
             {path.map((paths, i) => (
               <div key={i}>
                 <Link

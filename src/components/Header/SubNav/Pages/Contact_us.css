@@ -1,0 +1,185 @@
+h1.contact_h1 {
+  text-align: center !important;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  /* font-weight: 300; */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.009rem;
+  color: #333e48;
+  line-height: 1.5;
+}
+
+.margin_top {
+  margin-top: 10px;
+}
+
+h3.leave_msg_h3 {
+  position: relative;
+  font-size: 1.56275rem;
+  padding-bottom: 0.5rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5;
+  color: #333e48;
+  text-align: left;
+}
+
+span.yellow_bottom {
+  border-bottom: 2px solid #fed700;
+  padding-bottom: 13px;
+}
+
+hr.yellow_bottom_hr {
+  margin-top: -7.1px;
+  color: #77838f;
+}
+
+label.name_label {
+  display: block;
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+span.star_span {
+  color: #ff0000;
+  font-size: 16px;
+  font-size: 0.875rem;
+  font-weight: 700 !important;
+}
+
+input.enter_input_box {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.34rem + 2px);
+  padding: 0.67rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #818181;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ddd;
+  border-radius: 1.4rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.enter_input_div {
+  margin-bottom: 26px;
+}
+
+textarea.text_area {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.34rem + 2px);
+  padding: 0.67rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #818181;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ddd;
+  border-radius: 1.4rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: 150px;
+  overflow: auto;
+  padding: 32px;
+}
+
+button.submit_btn_contact_us {
+  display: inline-block;
+  font-weight: 700;
+  color: #333e48;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.6rem 2rem !important;
+  font-size: 0.875rem;
+  border-radius: 1.4rem;
+  color: #333e48;
+  background-color: #fed700;
+  border-color: aliceblue;
+  -moz-appearance: none;
+}
+
+.text_area_div {
+  margin-bottom: 26px;
+}
+
+span.span_left {
+  margin-left: -6.5px;
+}
+
+.row_contactus.row {
+  margin-top: 30px;
+}
+
+.iframe_contactus_div {
+  margin-bottom: 50px;
+}
+
+h4.kohinoor_address_heading {
+  font-size: 1.12525rem;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333e48;
+  text-align: left;
+}
+
+.kohinoor_address {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333e48;
+  text-align: left;
+}
+
+.kohinoor_telephone_div {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #333e48;
+  text-align: left;
+}
+
+a.kohinoor_link {
+  color: #0062bd !important;
+}
+
+.kohinoor_address_div {
+  margin-top: 28px;
+}
+
+.first_section_contactus,
+.second_section_contactus {
+  padding: 0px 20px;
+}
+
+h5.opening_hour_h5 {
+  font-size: 0.875rem;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+  color: #333e48 !important;
+  text-align: left;
+}
+
+p.opening_hours_para {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333e48;
+  text-align: left;
+}
+
+.opening_hours_div {
+  margin-top: 45px;
+}

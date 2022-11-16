@@ -30,49 +30,77 @@ function Navbar_sub() {
   const handleShow = () => setShowModal(true);
   return (
     <>
-      <Navbar variant="dark" sticky="top" className="nav_sub">
+      {/* <Navbar variant="dark" sticky="top" className="nav_sub">
         <Container className="nav_right_align">
-          <Nav className="ml-auto">
-            <ul>
-              <li>
+          <Nav className="navigation_main">
+            <ul className="sub_nav_ul">
+              <li className="sub_nav_li">
                 <Nav.Link href="/store-locator">
                   <img src={map_png} alt="marker" className="store_locator" />{" "}
                   <b className="line">Store Locator &nbsp; &nbsp;</b>
                 </Nav.Link>
               </li>
-              <li>
+              <li className="sub_nav_li">
                 <Nav.Link href="#" onClick={showSidebar}>
-                  <img
-                    class="icon"
-                    src="https://i.imgur.com/TkPm63y.png"
-                    alt="order"
-                    className="store_locator"
-                  />
                   <b className="line">Track Your Order &nbsp; &nbsp;</b>
                 </Nav.Link>
               </li>
-              <li>
+              <li className="sub_nav_li">
                 <Nav.Link href="#">
                   <b className="line">My Location &nbsp; &nbsp;</b>
                 </Nav.Link>
               </li>
-              <li>
+              <li className="sub_nav_li">
                 <Nav.Link href="contact-us">
                   <b className="line">Contact Us &nbsp; &nbsp;</b>
                 </Nav.Link>
               </li>
-              <li>
+              <li className="sub_nav_li">
                 <Nav.Link href="#" onClick={setShowModal}>
                   <b className="line">Register/Sign in &nbsp; &nbsp;</b>
                 </Nav.Link>
               </li>
-              <li>
+              <li className="sub_nav_li">
                 <Nav.Link href="#">
                   <b className="line">Wishlist &nbsp; &nbsp;</b>
                 </Nav.Link>
               </li>
             </ul>
           </Nav>
+        </Container>
+      </Navbar> */}
+
+      <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto nav_flex">
+              <Nav.Link href="/store-locator" className="border_right">
+                <img src={map_png} alt="marker" className="store_locator" />
+                Store Locator
+              </Nav.Link>
+              <Nav.Link href="#" className="border_right" onClick={showSidebar}>
+                Track Your Order
+              </Nav.Link>
+              <Nav.Link href="#" className="border_right">
+                <img src={map_png} alt="marker" className="store_locator" />
+                My Location
+              </Nav.Link>
+              <Nav.Link href="contact-us" className="border_right">
+                Contact Us
+              </Nav.Link>
+              <Nav.Link
+                href="#"
+                className="border_right"
+                onClick={setShowModal}
+              >
+                Register / Sign in
+              </Nav.Link>
+              <Nav.Link href="#" className="border_right">
+                Wishlist
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
 
@@ -304,7 +332,10 @@ function Navbar_sub() {
 
                           <div>
                             <div className="input-icons">
-                              <i class="fa fa-user icon"></i>
+                              <i
+                                class="fa fa-mobile icon"
+                                aria-hidden="true"
+                              ></i>
                               <span className="line_vr"></span>
                               <input
                                 className="input_with_icon"
@@ -317,7 +348,10 @@ function Navbar_sub() {
 
                           <div>
                             <div className="input-icons">
-                              <i class="fa fa-user icon"></i>
+                              <i
+                                class="fa fa-envelope icon"
+                                aria-hidden="true"
+                              ></i>
                               <span className="line_vr"></span>
                               <input
                                 className="input_with_icon"
@@ -330,7 +364,8 @@ function Navbar_sub() {
 
                           <div>
                             <div className="input-icons">
-                              <i class="fa fa-user icon"></i>
+                              <i class="fa fa-lock icon" aria-hidden="true"></i>
+
                               <span className="line_vr"></span>
                               <input
                                 className="input_with_icon"
@@ -343,7 +378,10 @@ function Navbar_sub() {
 
                           <div>
                             <div className="input-icons">
-                              <i class="fa fa-user icon"></i>
+                              <i
+                                class="fa fa-briefcase icon"
+                                aria-hidden="true"
+                              ></i>
                               <span className="line_vr"></span>
                               <input
                                 className="input_with_icon"

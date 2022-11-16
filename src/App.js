@@ -7,10 +7,16 @@ import Midpage from "./components/Midpage/Midpage";
 import "./App.css";
 import Product_Details from "./components/Product_Page/Product_Details";
 import { useLocation } from "react-router-dom";
+import Contact_us from "./components/Header/SubNav/Pages/Contact_us";
 
 function App(props) {
   console.log("PROPS -->", props);
   const location = useLocation();
+  function bark() {
+    console.log("Woof!");
+  }
+
+  bark.animal = "dog";
 
   return (
     <div className="App">
@@ -23,6 +29,7 @@ function App(props) {
           path={`/product/:productId/:product_name`}
           element={<Product_Details />}
         />
+        <Route path="/contact-us" element={<Contact_us />} />
       </Routes>
     </div>
   );
