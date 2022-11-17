@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
+import Store_Location from "../../../assets/json_data/Store_Location.json";
+import Container from "react-bootstrap/Container";
 import "./store_locator.css";
+import MyMarker from "./MyMarker";
+
+const points = [
+  { id: 1, title: "Round Pond", lat: 51.506, lng: -0.184 },
+  { id: 2, title: "The Long Water", lat: 51.508, lng: -0.175 },
+  { id: 3, title: "The Serpentine", lat: 51.505, lng: -0.164 },
+];
 
 function Store_Locator() {
   const [lat, setLat] = useState("");
@@ -36,23 +45,53 @@ function Store_Locator() {
           />
         </div>
 
-        <button type="submit" className="find_now">
-          FIND NOW
-        </button>
+        <div className="find_now_btn_div">
+          <button type="submit" className="find_now_btn">
+            FIND NOW
+          </button>
+        </div>
 
-        <div className="stores16">
+        <div className="stores16_div">
           <p>
-            <b>16</b> stores near you
+            <strong>16</strong> stores near you
           </p>
+        </div>
+        <hr className="store_locator_hr_line" />
+
+        <div className="store_address_div_main" style={{ height: "500px" }}>
+          {Store_Location.map((loc, i) => (
+            <Container>
+              <div className="store_address_div_sub">
+                <div className="store_img_alt_div">
+                  <img src="image" alt={loc.alt_name} className="store_image" />
+                </div>
+                <div className="store_number_div">
+                  <p className="store_no">{loc.no}</p>
+                  <p className="store_distance">{loc.km} km</p>
+                </div>
+                <div className="store_adress_div">
+                  <div className="store_address_header">
+                    <h3 className="store_name_header">{loc.address_header}</h3>
+                  </div>
+                  <div className="actual_store_address">
+                    <address className="store_real_address">
+                      {loc.address}
+                    </address>
+                  </div>
+                </div>
+              </div>
+            </Container>
+          ))}
         </div>
       </div>
 
-      <iframe
-        id="iframeId"
-        height="845px"
-        width="100%"
-        className="video_frame"
-      ></iframe>
+      <iframe id="iframeId" height="845px" width="100%" className="video_frame">
+        {points.map(({ lat, lng, id, title }) => {
+          return (
+            <MyMarker key={id} lat={lat} lng={lng} text={id} tooltip={title} />
+          );
+        })}
+      </iframe>
     </div>
   );
 }

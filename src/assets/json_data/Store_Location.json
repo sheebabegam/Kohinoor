@@ -1,0 +1,76 @@
+[
+  {
+    "alt_name": "Kohinoor Electronics Chembur",
+    "no": 1,
+    "km": 2.8,
+    "address_header": "Kohinoor Electronics Chembur",
+    "address": "Chembur, Bezzola Complex, Sion-Trombay Road, Suman Nagar, Chembur, Mumbai, Maharashtra 400071, Mumbai - 400071",
+    "lat": "",
+    "long": ""
+  },
+
+  {
+    "alt_name": "Kohinoor Electronics Santacruz",
+    "no": 2,
+    "km": 5.85,
+    "address_header": "Kohinoor Electronics Santacruz",
+    "address": "Santacruz, Kamla Spaces, Showroom No 2, Near Kheera Nagar, S.V. Road Santacruz (W) Mumbai-400054, Mumbai - 400054",
+    "lat": "",
+    "long": ""
+  },
+  {
+    "alt_name": "Kohinoor Electronics Dadar",
+    "no": 3,
+    "km": 9.16,
+    "address_header": "Kohinoor Electronics Dadar",
+    "address": "Dadar, 182, Haji Habib Building. Opp. Fire Brigade, Dr. B A Road Dadar (E) Mumbai - 400014., Mumbai - 400014",
+    "lat": "",
+    "long": "",
+    "color": "lightgreen"
+  },
+  {
+    "alt_name": "Kohinoor Electronics Andheri",
+    "no": 4,
+    "km": 9.62,
+    "address_header": "Kohinoor Electronics Andheri",
+    "address": "Andheri, Kamla Spaces, Showroom No 2, Near Kheera Nagar,  S.V. Road Santacruz (W) Mumbai-400054,, Mumbai - 400054",
+    "lat": "",
+    "long": ""
+  },
+  {
+    "alt_name": "Kohinoor Electronics Vashi Sector 9",
+    "no": 5,
+    "km": 11,
+    "address_header": "Kohinoor Electronics Vashi Sector 9",
+    "address": "Vashi Sector 9, Shop No. 1 to 7, Pranav CHS., Plot No. 15, Sector 9, Vashi, Nr. Bus Depot, Navi Mumbai - 400705,, Thane - 400705",
+    "lat": "",
+    "long": ""
+  },
+  {
+    "alt_name": "Kohinoor Electronics Kandivali",
+    "no": 6,
+    "km": 14.88,
+    "address_header": "Kohinoor Electronics Kandivali",
+    "address": "Kandivali, 340, Mahalaxmi Centre, SV Road, Opp. Balbharti School, Kandivli (W) , Mumbai - 4000067, Mumbai - 400067",
+    "lat": "",
+    "long": ""
+  },
+  {
+    "alt_name": "Kohinoor Electronics Thane",
+    "no": 7,
+    "km": 15.43,
+    "address_header": "Kohinoor Electronics Thane",
+    "address": "Thane, MalhaarTheatre, Opp. Telephone Exchange, Gokhale Road, Thane (W) - 400602, Thane - 400602",
+    "lat": "",
+    "long": ""
+  },
+  {
+    "alt_name": "Kohinoor Electronics GBRD",
+    "no": 8,
+    "km": 17.18,
+    "address_header": "Kohinoor Electronics GBRD",
+    "address": "GBRD, Orien Business Park, Shop No. 5 & 6, Next To Cine Wonder Mall, Thane Ghodbunder Thane-400604, Thane - 400604",
+    "lat": "",
+    "long": ""
+  }
+]
