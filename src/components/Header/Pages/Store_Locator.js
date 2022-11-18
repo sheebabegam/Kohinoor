@@ -3,12 +3,8 @@ import Store_Location from "../../../assets/json_data/Store_Location.json";
 import Container from "react-bootstrap/Container";
 import "./store_locator.css";
 import MyMarker from "./MyMarker";
-
-const points = [
-  { id: 1, title: "Round Pond", lat: 51.506, lng: -0.184 },
-  { id: 2, title: "The Long Water", lat: 51.508, lng: -0.175 },
-  { id: 3, title: "The Serpentine", lat: 51.505, lng: -0.164 },
-];
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { MdOutlineAssistantDirection } from "react-icons/md";
 
 function Store_Locator() {
   const [lat, setLat] = useState("");
@@ -65,10 +61,10 @@ function Store_Locator() {
                 <div className="store_img_alt_div">
                   <img src="image" alt={loc.alt_name} className="store_image" />
                 </div>
-                <div className="store_number_div">
+                <Container className="store_number_div">
                   <p className="store_no">{loc.no}</p>
                   <p className="store_distance">{loc.km} km</p>
-                </div>
+                </Container>
                 <div className="store_adress_div">
                   <div className="store_address_header">
                     <h3 className="store_name_header">{loc.address_header}</h3>
@@ -79,19 +75,32 @@ function Store_Locator() {
                     </address>
                   </div>
                 </div>
+
+                <Container className="direction_div">
+                  <div>
+                    <AiOutlineInfoCircle className="dirction_icon" />
+                    <label className="more_info_label">MORE INFO</label>
+                  </div>
+                  <div>
+                    <MdOutlineAssistantDirection
+                      className="dirction_icon"
+                      id="color_direction_icon"
+                    />
+                    <label className="more_info_label">GET DIRECTION</label>
+                  </div>
+                </Container>
               </div>
             </Container>
           ))}
         </div>
       </div>
 
-      <iframe id="iframeId" height="845px" width="100%" className="video_frame">
-        {points.map(({ lat, lng, id, title }) => {
-          return (
-            <MyMarker key={id} lat={lat} lng={lng} text={id} tooltip={title} />
-          );
-        })}
-      </iframe>
+      <iframe
+        id="iframeId"
+        height="845px"
+        width="100%"
+        className="video_frame"
+      ></iframe>
     </div>
   );
 }

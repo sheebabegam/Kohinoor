@@ -168,3 +168,22 @@ address.store_real_address {
 .store_div::-webkit-scrollbar-thumb {
   background-color: slategrey;
 }
+
+.more_info_label {
+  display: block;
+  font-size: 10px;
+}
+
+.direction_div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dirction_icon {
+  font-size: 40px;
+}
+
+svg#color_direction_icon {
+  color: #0062bd;
+}

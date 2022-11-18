@@ -104,88 +104,198 @@ function Navbar_sub() {
         </Container>
       </Navbar>
 
-      <Offcanvas placement="end" show={show} onHide={closeSidebar}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title className="welcome_sidebar_div"></Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Title className="welcome_sidebar_div">
-          Welcome Back!
-        </Offcanvas.Title>
-        <p className="login_manage">Login to manage your account.</p>
-        <br />
-
-        <Offcanvas.Body>
-          <div>
-            <div class="input-group">
-              <span class="input-group-append">
-                <button className="user_icon" type="button">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                </button>
-              </span>
-              <input
-                className="input_user_icon"
-                type="text"
-                placeholder="Enter Email/Mobile number"
-                id="example-search-input"
-              />
-            </div>
+      <div>
+        {login === "login" && (
+          <Offcanvas placement="end" show={show} onHide={closeSidebar}>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title className="welcome_sidebar_div"></Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Title className="welcome_sidebar_div">
+              Welcome Back!
+            </Offcanvas.Title>
+            <p className="login_manage">Login to manage your account.</p>
             <br />
 
-            <div class="input-group">
-              <span class="input-group-append">
-                <button className="user_icon" type="button">
-                  <i class="fa fa-lock" aria-hidden="true"></i>
-                </button>
-              </span>
-              <input
-                className="input_user_icon"
-                type="text"
-                placeholder="Password"
-                id="example-search-input"
-              />
-            </div>
+            <Offcanvas.Body>
+              {login === "login" && (
+                <div>
+                  <div>
+                    <div className="input-icons">
+                      <i class="fa fa-user icon"></i>
+                      <span className="line_vr1"></span>
+                      <input
+                        className="input_with_icon"
+                        type="text"
+                        placeholder="Name"
+                      />
+                    </div>
+                  </div>
+                  <br />
 
+                  <div>
+                    <div className="input-icons">
+                      <i class="fa fa-lock icon" aria-hidden="true"></i>
+
+                      <span className="line_vr1"></span>
+                      <input
+                        className="input_with_icon"
+                        type="text"
+                        placeholder="Password"
+                      />
+                    </div>
+                  </div>
+
+                  <br />
+                  <div>
+                    <a href="#" className="forget_password">
+                      Forgot Password?
+                    </a>
+                  </div>
+
+                  <div>
+                    <Button className="login_btn">Login</Button>
+                  </div>
+                  <div className="or_div" style={{ textAlign: "center" }}>
+                    <hr className="solid" /> <span className="or_tag">OR</span>{" "}
+                    <hr className="solid" style={{ marginLeft: "5px" }} />
+                  </div>
+
+                  <div>
+                    <Button className="request_btn">Request OTP</Button>
+                  </div>
+
+                  <div className="do_not_have_account_div">
+                    <small>Do not have an account?</small>
+                    &nbsp;
+                    <a
+                      href="#"
+                      className="signup_link"
+                      onClick={setSignupModalChange}
+                    >
+                      Signup
+                    </a>
+                  </div>
+
+                  <div class="d-flex mb-3">
+                    <Button className="facebook_btn">
+                      <i class="fa fa-facebook-square" aria-hidden="true"></i>{" "}
+                      &nbsp; Facebook
+                    </Button>
+
+                    <Button className="google_btn">
+                      <i class="fa fa-google" aria-hidden="true"></i>
+                      &nbsp;Google
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </Offcanvas.Body>
+          </Offcanvas>
+        )}
+      </div>
+
+      <div>
+        {login === "register" && (
+          <Offcanvas placement="end" show={show} onHide={closeSidebar}>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title className="welcome_sidebar_div"></Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Title className="welcome_sidebar_div">
+              Welcome Back!
+            </Offcanvas.Title>
+            <p className="login_manage">Login to manage your account.</p>
             <br />
-            <div>
-              <a href="#" className="forget_password">
-                Forgot Password?
-              </a>
-            </div>
 
-            <div>
-              <Button className="login_btn">Login</Button>
-            </div>
-            <div className="or_div" style={{ textAlign: "center" }}>
-              <hr className="solid" /> <span className="or_tag">OR</span>{" "}
-              <hr className="solid" style={{ marginLeft: "5px" }} />
-            </div>
+            <Offcanvas.Body>
+              <div>
+                <div className="modal_div">
+                  <div>
+                    <div>
+                      <div className="input-icons">
+                        <i class="fa fa-user icon"></i>
+                        <span className="line_vr1"></span>
+                        <input
+                          className="input_with_icon"
+                          type="text"
+                          placeholder="Name"
+                        />
+                      </div>
+                    </div>
 
-            <div>
-              <Button className="request_btn">Request OTP</Button>
-            </div>
+                    <div>
+                      <div className="input-icons">
+                        <i class="fa fa-mobile icon" aria-hidden="true"></i>
 
-            <div className="do_not_have_account_div">
-              <small>Do not have an account?</small>
-              &nbsp;
-              <a href="#" className="signup_link">
-                Signup
-              </a>
-            </div>
+                        <span className="line_vr1"></span>
+                        <input
+                          className="input_with_icon"
+                          type="text"
+                          placeholder="Mobile"
+                        />
+                      </div>
+                    </div>
 
-            <div class="d-flex mb-3">
-              <Button className="facebook_btn">
-                <i class="fa fa-facebook-square" aria-hidden="true"></i> &nbsp;
-                Facebook
-              </Button>
+                    <div>
+                      <div className="input-icons">
+                        <i class="fa fa-envelope icon" aria-hidden="true"></i>
 
-              <Button className="google_btn">
-                <i class="fa fa-google" aria-hidden="true"></i>
-                &nbsp;Google
-              </Button>
-            </div>
-          </div>
-        </Offcanvas.Body>
-      </Offcanvas>
+                        <span className="line_vr1"></span>
+                        <input
+                          className="input_with_icon"
+                          type="text"
+                          placeholder="Email"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="input-icons">
+                        <i class="fa fa-lock icon" aria-hidden="true"></i>
+
+                        <span className="line_vr1"></span>
+                        <input
+                          className="input_with_icon"
+                          type="text"
+                          placeholder="Password"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="input-icons">
+                        <i class="fa fa-briefcase icon" aria-hidden="true"></i>
+
+                        <span className="line_vr1"></span>
+                        <input
+                          className="input_with_icon"
+                          type="text"
+                          placeholder="Occupation"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <Button className="login_btn">Get Started</Button>
+                    </div>
+
+                    <div className="do_not_have_account_div">
+                      <small>Already have an account?</small>
+                      &nbsp;
+                      <a
+                        href="#"
+                        className="signup_link"
+                        onClick={setModalChange}
+                      >
+                        Login
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Offcanvas.Body>
+          </Offcanvas>
+        )}
+      </div>
 
       <div>
         {login === "login" && (

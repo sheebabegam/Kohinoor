@@ -505,6 +505,21 @@ h4.back_blue {
   margin-top: 9px;
 }
 
+.line_vr1 {
+  border-right: 1px solid #818181;
+  height: 43px;
+  position: absolute;
+  left: 20%;
+}
+
+/* .input-icons:focus {
+  border: 1px solid #0062bd !important;
+} */
+
+.input_with_icon :focus {
+  border: 1px solid #0062bd !important;
+}
+
 p.close_btn_modal {
   color: white !important;
   font-size: 32px;
