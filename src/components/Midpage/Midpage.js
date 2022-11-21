@@ -30,10 +30,49 @@ import Video_Carousel from "./Video_Carousel";
 import Video_Caro from "./Video_Caro";
 import Click_Carousel from "./Click_Carousel";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function Midpage() {
   const [value, setValue] = useState("Kohinoor");
   const handleChange = (e) => {
     setValue(e.target.value);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   const responsive = {
     superLargeDesktop: {
@@ -87,7 +126,7 @@ function Midpage() {
           style={{ overflowX: "hidden" }}
         >
           <Container>
-            <Carousel responsive={responsive}>
+            <Slider {...settings}>
               {Brands_Carousel.map((image, i) => (
                 <div className="carousel_width d-flex justify-content-center align-items-center flex-column">
                   <img
@@ -98,7 +137,7 @@ function Midpage() {
                   <h4 className="h4">Headphones</h4>
                 </div>
               ))}
-            </Carousel>
+            </Slider>
           </Container>
         </div>
         <div className="ad_div">
@@ -156,30 +195,42 @@ function Midpage() {
       <div className="why_kohinoor_div">
         <div className="why_kohinoor">
           <h2 className="h2_kohinoor">Why choose Kohinoor</h2>
-          <p>
+          <p className="kohinoor_since_line">
             Kohinoor’s Promise of Joyful Experience & Assured Quality, Creating
-            Milestones.
+            Milestones <br /> Since 1967 Your trusted destination for Consumer
+            Electronics
           </p>
-          <p>Since 1967 Your trusted destination for Consumer Electronics</p>
         </div>
 
-        <div className="slider_icon_div">
-          <div className="slider_carousel_div">
-            <Carousel responsive={responsive}>
-              {Why_Kohinoor.map((data, i) => (
-                <div key={i} className="gray_scale">
-                  <img
-                    src={data.img}
-                    alt={data.alt}
-                    className="slider_carousel"
-                  />
-                  <h4 className="h4">{data.tag1}</h4>
-                  <h4 className="h4">{data.tag2}</h4>
-                </div>
-              ))}
-            </Carousel>
-          </div>
-        </div>
+        <Container className="slider_icon_div">
+          {/* <div className="slider_carousel_div"> */}
+          {/* <Carousel
+              responsive={responsive}
+              className="why_kohinoor_carousel"
+            > */}
+          {/* <Slider {...settings}> */}
+          {Why_Kohinoor.map((data, i) => (
+            <div className="grayscale_hover">
+              <div key={i} className="gray_scale">
+                <img
+                  src={data.img}
+                  alt={data.alt}
+                  className="slider_carousel"
+                />
+              </div>
+
+              <div>
+                <h4 className="why_kohinoor_offer">
+                  {data.tag1} <br /> {data.tag2}
+                </h4>
+              </div>
+            </div>
+          ))}
+          {/* </Slider> */}
+
+          {/* </Carousel> */}
+          {/* </div> */}
+        </Container>
       </div>
 
       <Container className="top_brands_div">
@@ -201,7 +252,6 @@ function Midpage() {
         </div>
       </Container>
 
-      {/* <div> */}
       <Container>
         <img
           src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/images/static_banner/101.png"
@@ -210,7 +260,6 @@ function Midpage() {
         />
       </Container>
       <br />
-      {/* </div> */}
 
       <div>
         <Footer />

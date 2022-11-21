@@ -8,6 +8,7 @@ import "./App.css";
 import Product_Details from "./components/Product_Page/Product_Details";
 import { useLocation } from "react-router-dom";
 import Contact_us from "./components/Header/SubNav/Pages/Contact_us";
+import Mycart from "./components/Header/MainNav/Pages/Mycart";
 
 function App(props) {
   console.log("PROPS -->", props);
@@ -30,6 +31,7 @@ function App(props) {
           element={<Product_Details />}
         />
         <Route path="/contact-us" element={<Contact_us />} />
+        <Route path="/cart" element={<Mycart />} />
       </Routes>
     </div>
   );

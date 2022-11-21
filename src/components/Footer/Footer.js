@@ -18,7 +18,7 @@ function Footer() {
   return (
     <div>
       <Navbar variant="dark" expand="lg" className="news_letter">
-        <Container fluid className="subscribe_bar ">
+        <Container className="subscribe_bar ">
           <Navbar.Brand
             href="#home"
             className="subscribe "
@@ -38,8 +38,7 @@ function Footer() {
               </span>
             </div>
           </Navbar.Brand>
-          <label htmlFor="copy-button">
-            {/* <button id="icon1">All Categories &nbsp; &nbsp; &nbsp;</button> */}
+          <div className="copy_button">
             <input
               name="search"
               aria-label="search"
@@ -47,7 +46,7 @@ function Footer() {
               className="search_newsletter"
             />
             <button className="subscribe_button"> Subscribe</button>
-          </label>
+          </div>
         </Container>
       </Navbar>
 

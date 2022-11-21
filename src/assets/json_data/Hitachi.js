@@ -14,7 +14,12 @@ export const hitachi_img = [
 ];
 
 export const path = [
-  { path1: "Air Conditioner", path2: "Split AC", path3: "1.0Ton" },
+  {
+    path1: "Air Conditioner",
+    path2: "Split AC",
+    path3: "1.0Ton",
+    cart: "cart",
+  },
 ];
 
 export const hitachi_details = [

@@ -87,6 +87,11 @@ function Navbar_sub() {
                 My Location
               </Nav.Link>
               <Nav.Link href="contact-us" className="border_right">
+                <i
+                  class="fa fa-phone"
+                  aria-hidden="true"
+                  style={{ marginRight: "5px" }}
+                ></i>
                 Contact Us
               </Nav.Link>
               <Nav.Link
@@ -94,9 +99,15 @@ function Navbar_sub() {
                 className="border_right"
                 onClick={setShowModal}
               >
+                <i
+                  class="fa fa-user"
+                  aria-hidden="true"
+                  style={{ marginRight: "5px" }}
+                ></i>
                 Register / Sign in
               </Nav.Link>
               <Nav.Link href="#" className="border_right">
+                <i class="fa fa-heart-o" style={{ marginRight: "5px" }}></i>
                 Wishlist
               </Nav.Link>
             </Nav>

@@ -76,7 +76,7 @@ function MainNav() {
             <Navbar.Collapse id="responsive-navbar-nav1">
               <Nav className="mr-auto">
                 <Nav.Link href="/">Customer Care</Nav.Link>
-                <Nav.Link href="/profile">My Cart</Nav.Link>
+                <Nav.Link href="/cart">My Cart</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Col>

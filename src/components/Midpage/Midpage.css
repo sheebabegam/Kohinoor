@@ -2,14 +2,14 @@
   height: 80px !important;
 }
 
-.slider_carousel:hover {
+/* .slider_carousel:hover {
   filter: grayscale(1);
-}
+} */
 
-.gray_scale:hover {
+/* .gray_scale:hover {
   filter: grayscale(1);
   width: fit-content;
-}
+} */
 
 li.react-multi-carousel-item.react-multi-carousel-item--active {
   border-right: 1px solid white;
@@ -19,16 +19,84 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   border-right: 1px solid white;
 } */
 
-.slider_icon_div {
+/* .slider_icon_div {
   position: relative;
   background-color: black;
-}
+} */
 
 .slider_carousel_div {
   padding: 50px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+p.kohinoor_since_line {
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center !important;
+  color: white !important;
+  background-color: black;
+  font-size: 17px;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 400 !important;
+}
+
+h4.why_kohinoor_offer {
+  margin: 15px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  transition: 0.3s;
+  font-weight: 500;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  color: #fed700;
+}
+
+.slider_icon_div {
+  /* display: flex !important;
+  align-items: center !important;
+  justify-content: center !important; */
+}
+
+/* h4.why_kohinoor_offer:hover {
+  transition: transform 0.4s;
+  transform: scale(1.1);
+  color: white !important;
+} */
+
+.grayscale_hover {
+  border-right: 1px solid #e7eaf3 !important;
+  height: 117px;
+  margin-bottom: 30px;
+  width: 300px;
+}
+
+/* .grayscale:hover {
+  transition: transform 0.4s;
+  transform: scale(1.1);
+  color: white !important;
+  filter: grayscale(1);
+  width: fit-content;
+} */
+
+.grayscale_hover:hover {
+  transition: transform 0.4s;
+  transform: scale(1);
+  color: white !important;
+  filter: grayscale(1);
+}
+
+.gray_scale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right1 {
+  background-color: black !important;
 }
 
 img.slider_carousel {
@@ -110,11 +178,11 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   border-radius: 50%;
 }
 
-.slider_carousel:hover {
+/* .slider_carousel:hover {
   transition: transform 0.4s;
-  transform: scale(1.1); /* (150% zoom)*/
+  transform: scale(1.1); 
   color: white !important;
-}
+} */
 
 .h4 {
   color: #efc340 !important;

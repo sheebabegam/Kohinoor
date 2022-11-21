@@ -321,8 +321,6 @@ a.new_arrival_bar.nav-link:hover {
 .react-multi-carousel-list {
   display: flex;
   align-items: center;
-  /* overflow: hidden; */
-  /* position: relative; */
   width: 1500px;
   justify-content: space-between;
   display: flex;
@@ -337,11 +335,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
   top: 284px;
   right: -6px;
 }
-
-/* button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
-  top: 284px;
-  left: -6px;
-} */
 
 li.react-multi-carousel-item.react-multi-carousel-item--active {
   width: 351.5px !important;

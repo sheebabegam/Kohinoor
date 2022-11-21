@@ -46,7 +46,7 @@ function Accessories_Carousel() {
     <div>
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid className="new_arrival_bar_trend">
+          <Container className="new_arrival_bar_trend">
             <Nav.Link className="new_arrival_bar1">New Arrivals</Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <Nav.Link href="#" className="new_arrival_bar1">
@@ -122,7 +122,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Laptops
             </Nav.Link>
@@ -183,7 +183,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Accessories
             </Nav.Link>
@@ -244,7 +244,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Televisions
             </Nav.Link>
@@ -305,7 +305,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Air Conditioner
             </Nav.Link>
@@ -366,7 +366,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Washing Machine
             </Nav.Link>
@@ -427,7 +427,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Microwave
             </Nav.Link>
@@ -488,7 +488,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Soundbar
             </Nav.Link>
@@ -549,7 +549,7 @@ function Accessories_Carousel() {
 
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container fluid>
+          <Container>
             <Nav.Link href="#" className="new_arrival_bar">
               Recently Viewed
             </Nav.Link>
