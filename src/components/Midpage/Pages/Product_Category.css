@@ -1,0 +1,75 @@
+.accordion {
+  --bs-accordion-border-width: 0px !important;
+  --bs-accordion-active-bg: transparent !important;
+  --bs-accordion-active-color: black !important;
+}
+
+.accordion-button::after {
+  margin-left: -155px !important;
+  /* transform: rotate(-90deg) !important; */
+}
+
+.accordion-button:not(.collapsed) {
+  color: black !important;
+  background-color: transparent !important;
+  box-shadow: 0px !important;
+}
+
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+.accordion-button:focus {
+  z-index: 3;
+  border-color: transparent !important;
+  outline: 0;
+  box-shadow: transparent !important;
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+.accordion-button:focus {
+  /* z-index: 3; */
+  border-color: transparent !important;
+  /* outline: 0; */
+  box-shadow: 0px !important;
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+.accordion-button:not(.collapsed) {
+  color: black !important;
+  background-color: transparent !important;
+  box-shadow: 0px !important;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: var(--bs-accordion-btn-focus-border-color);
+  outline: 0;
+  box-shadow: none !important;
+}
+
+/* .accordion-button::after {
+  -webkit-transform: rotate(-90deg) !important;
+  transform: rotate(-90deg) !important;
+} */

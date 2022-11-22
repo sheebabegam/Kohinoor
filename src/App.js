@@ -9,16 +9,9 @@ import Product_Details from "./components/Product_Page/Product_Details";
 import { useLocation } from "react-router-dom";
 import Contact_us from "./components/Header/SubNav/Pages/Contact_us";
 import Mycart from "./components/Header/MainNav/Pages/Mycart";
+import Product_Category from "./components/Midpage/Pages/Product_Category";
 
-function App(props) {
-  console.log("PROPS -->", props);
-  const location = useLocation();
-  function bark() {
-    console.log("Woof!");
-  }
-
-  bark.animal = "dog";
-
+function App() {
   return (
     <div className="App">
       <Navbar_sub />
@@ -32,6 +25,7 @@ function App(props) {
         />
         <Route path="/contact-us" element={<Contact_us />} />
         <Route path="/cart" element={<Mycart />} />
+        <Route path="/search" element={<Product_Category />} />
       </Routes>
     </div>
   );

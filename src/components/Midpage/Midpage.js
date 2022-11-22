@@ -29,12 +29,14 @@ import React, { useState } from "react";
 import Video_Carousel from "./Video_Carousel";
 import Video_Caro from "./Video_Caro";
 import Click_Carousel from "./Click_Carousel";
+import { useNavigate, Link } from "react-router-dom";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Midpage() {
+  const navigate = useNavigate();
   const [value, setValue] = useState("Kohinoor");
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -175,7 +177,14 @@ function Midpage() {
         {headphones.map((prod, i) => {
           return (
             <div className="headphones_img_div">
-              <img src={prod.img} alt={prod.brand} className="headphone_img" />
+              <Link to="/search">
+                <img
+                  src={prod.img}
+                  alt={prod.brand}
+                  className="headphone_img"
+                  onClick={navigate("/search")}
+                />
+              </Link>
             </div>
           );
         })}

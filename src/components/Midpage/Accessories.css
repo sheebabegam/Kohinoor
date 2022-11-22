@@ -129,6 +129,7 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
 
 .headphones_img_div {
   margin: 25px 20px;
+  cursor: pointer;
 }
 
 .new_arrival_bar {
