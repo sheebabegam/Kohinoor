@@ -136,7 +136,7 @@ function Midpage() {
                     alt="brands"
                     className="slider_carousel"
                   />
-                  <h4 className="h4">Headphones</h4>
+                  <h4 className="h4_headphones">Headphones</h4>
                 </div>
               ))}
             </Slider>

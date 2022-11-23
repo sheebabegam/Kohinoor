@@ -184,9 +184,10 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   color: white !important;
 } */
 
-.h4 {
+h4_headphones {
   color: #efc340 !important;
   font-size: 15px !important;
+  background-color: black !important;
 }
 
 .headphone_ad_div {
