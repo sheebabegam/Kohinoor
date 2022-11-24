@@ -13,7 +13,8 @@ import MultiRangeSlider from "../../Midpage/Pages/MultiRangeSlider";
 import Dropdown from "react-bootstrap/Dropdown";
 import Card from "react-bootstrap/Card";
 import heart from "../../../assets/images/heart.svg";
-import Accessories from "../../../assets/json_data/Accessories.json";
+import Headphones_Filter from "../../../assets/json_data/Headphones_Filter.json";
+import Footer from "../../Footer/Footer";
 
 function Product_Category() {
   return (
@@ -268,16 +269,23 @@ function Product_Category() {
               </div>
 
               <div className="filter_card_main_div">
-                {Accessories.map((prod, i) => (
+                {Headphones_Filter.map((prod, i) => (
                   <div className="active_item_main_div_filter" key={i}>
                     <Card className="main_card_filter">
-                      <div className="heart_end">
-                        <div className="heart_round">
-                          <img
-                            src={heart}
-                            alt="favorite_icon"
-                            className="heart"
-                          />
+                      <div className="heart_eye_filter_card_div">
+                        <div className="heart_end1">
+                          <div className="heart_round">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <div className="heart_end1">
+                          <div className="heart_round">
+                            <img
+                              src={heart}
+                              alt="favorite_icon"
+                              className="heart1"
+                            />
+                          </div>
                         </div>
                       </div>
 
@@ -285,12 +293,12 @@ function Product_Category() {
                         <Card.Img
                           variant="top"
                           src={prod.img}
-                          className="image_offer"
+                          className="image_offer1"
                         />
                       </div>
                       <Card.Body className="card_body">
                         <div>
-                          <Card.Text className="card_text" id="product_name">
+                          <Card.Text className="card_text" id="product_name1">
                             {prod.name}
                           </Card.Text>
                           <Card.Text className="card_text" id="joy_price">
@@ -322,6 +330,8 @@ function Product_Category() {
           </Col>
         </Row>
       </Container>
+
+      <Footer />
     </div>
   );
 }

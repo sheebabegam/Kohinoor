@@ -391,11 +391,110 @@ button#dropdown-basic2::after {
 .filter_card_main_div {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .active_item_main_div_filter {
   width: 25%;
+}
+
+.main_card_filter.card:hover {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  box-shadow: 0 0 6px 0 rgb(1 1 1 / 30%);
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.card_img_div {
+  height: 250px !important;
+}
+
+.image_offer1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+  /* width: auto !important; */
+}
+
+.image_offer1 {
+  height: 200px;
+  width: 250px;
+  align-items: center;
+  /* margin-top: 17px; */
+}
+
+.heart1 {
+  height: 14px;
+  width: 18px;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+.heart_end1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  /* margin-top: 15px;
+  margin-right: 15px; */
+}
+
+.heart_eye_filter_card_div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+i.fa.fa-eye::before {
+  margin-left: 6px;
+}
+
+.card_img_div:hover {
+  transition: transform 0.4s;
+  transform: scale(1.17);
+  color: white !important;
+}
+
+element.style {
+}
+#product_name1 {
+  display: "-webkit-box";
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  min-height: 2.25rem;
+  color: #0062bd !important;
+  font-weight: 700 !important;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: -0.009rem;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* .{
+  transition: transform 0.4s;
+    transform: scale(1.1);
+    color: white !important;
+} */
+
+.main_card_filter.card:hover .card_img_div {
+  transition: transform 0.4s;
+  transform: scale(1.17);
 }
