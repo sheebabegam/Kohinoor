@@ -54,7 +54,7 @@ function Navbar_sub() {
     formData.append("occupation", occupation);
 
     await axios
-      .post("http://192.168.1.195:5000/signup/", formData) // daniel@yopmail.com // Daniel@123
+      .post("http://192.168.1.195:5000/signup/", formData)
       .then((res) => {
         console.log(res.data);
       })

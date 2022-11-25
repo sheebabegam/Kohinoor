@@ -80,3 +80,79 @@ a.drop_items_main_nav.dropdown-item:last-child {
   top: 46.5px;
   border-radius: 0px !important;
 }
+
+.side_dropdown_main_nav {
+  height: 400px;
+  width: 75%;
+  color: black;
+  float: roght;
+  float: right;
+  margin-right: 4%;
+  border-radius: 10px !important;
+  padding: 0 0 0 15px;
+  background: #f8f9fa !important;
+}
+
+h6.bluetooth_speakers_h6 {
+  color: #0061e0;
+  font-size: 14px;
+  position: relative;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-left: 13px;
+}
+
+ul.sub_dropdown_ul {
+  display: block;
+  justify-content: flex-start;
+  list-style-type: circle;
+}
+
+.first_col_dropdown_sub_main_nav.col-3 {
+  padding: 15px 0;
+  width: 24.5% !important;
+}
+
+hr.underline_yellow_mainNav_dropdown {
+  border-top: 2px solid #ffc107;
+  margin: 0px;
+  margin-bottom: 8px;
+  margin-left: 13px;
+}
+
+li.mainNav_li {
+  font-size: 0.92rem;
+}
+
+.mainNav_li::marker {
+  color: #0061e0;
+  font-size: 15px;
+}
+
+li.mainNav_li2 {
+  visibility: hidden;
+  font-size: 0.92rem;
+}
+
+img.image_dropdown_mainNav {
+  height: 370px;
+}
+
+.last_col_dropdown_sub_main_nav.col-3 {
+  /* height: 370px; */
+  width: 22.55% !important;
+}
+
+button.mainNav_viewAll {
+  font-size: 14px;
+  color: #0061e0;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  margin-left: -82px;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 22.5% !important;
+}
