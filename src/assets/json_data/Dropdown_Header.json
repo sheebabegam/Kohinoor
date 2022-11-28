@@ -1,0 +1,227 @@
+[
+  {
+    "prod_name1": "Refrigrator",
+    "prod_Id": "01",
+    "prod_list": [
+      {
+        "prod_01_h1": "Frost Free",
+        "prod_01_1": "292 litres"
+      }
+    ]
+  },
+  {
+    "prod_name2": "Accessories",
+    "prod_Id": "02",
+    "prod_list": [
+      {
+        "prod_02_h1": "Bluetooth Speakers",
+        "prod_02_i1": "Bose",
+        "prod_02_i2": "Saregama",
+        "prod_02_i3": "Infinity",
+        "prod_02_i4": "JBL",
+        "prod_02_i5": "Stuffcool",
+        "prod_02_i6": "Marshall",
+        "prod_02_i7": "Shemaroo",
+        "prod_02_i8": "Google"
+      },
+      {
+        "prod_02_h2": "Amazon Device",
+        "prod_02_2": "Eco Dot",
+        "prod_02_2": "Eco Show"
+      },
+      {
+        "prod_02_h3": "Wired Headphone",
+        "prod_02_3": "Boat"
+      },
+      {
+        "prod_02_h4": "Bluetooth Earphone"
+      },
+      {
+        "prod_02_h5": "Wired Earphones"
+      },
+      {
+        "prod_02_h6": "Frame",
+        "prod_02_6": "Bose"
+      },
+      {
+        "prod_02_h7": "Smart Watch",
+        "prod_02_7": "Boat"
+      }
+    ]
+  },
+  {
+    "prod_name3": "Air Conditioner",
+    "prod_Id": "03",
+    "prod_list": [
+      {
+        "prod_03_h1": "Window",
+        "prod_03_1": "0.75 Ton",
+        "prod_03_1": "1.0 Ton",
+        "prod_03_1": "1.5 Ton",
+        "prod_03_1": "2 Ton"
+      },
+      {
+        "prod_03_h2": "Split AC",
+        "prod_03_2": "0.8 Ton",
+        "prod_03_2": "1.0 Ton",
+        "prod_03_2": "1.1 Ton",
+        "prod_03_2": "1.2 Ton",
+        "prod_03_2": "1.3 Ton",
+        "prod_03_2": "1.5 Ton",
+        "prod_03_2": "1.6 Ton",
+        "prod_03_2": "1.8 Ton",
+        "prod_03_2": "2.0 Ton",
+        "prod_03_2": "2.2 Ton"
+      },
+      {
+        "prod_03_h3": "Portable",
+        "prod_03_3": "1.0 Ton"
+      }
+    ]
+  },
+  {
+    "prod_name4": "Computers",
+    "prod_Id": "04",
+    "prod_list": [
+      {
+        "prod_04_h1": "Desktop",
+        "prod_04_1": "Pentium",
+        "prod_04_1": "Intel celeron"
+      },
+      {
+        "prod_04_h2": "Laptops"
+      }
+    ]
+  },
+  {
+    "prod_name5": "Game Zone",
+    "prod_Id": "05",
+    "prod_list": [
+      {
+        "prod_05_h1": "Sony",
+        "prod_05_1": "PS4",
+        "prod_05_1": "PS5"
+      },
+      {
+        "prod_05_h2": "Game Accessories",
+        "prod_05_2": "PS5 Dualscence",
+        "prod_05_2": "PS5 HD Camera",
+        "prod_05_2": "PS5 Media Remote",
+        "prod_05_2": "Play Station Games"
+      }
+    ]
+  },
+  {
+    "prod_name6": "Home Appliances",
+    "prod_Id": "06",
+    "prod_list": [
+      {
+        "prod_06_h1": "Refrigerator",
+        "prod_06_1": "Diesct Cool",
+        "prod_06_1": "Frost Free",
+        "prod_06_1": "Side-by-side",
+        "prod_06_1": "Deep Freezer"
+      },
+      {
+        "prod_06_h2": "Microwaves",
+        "prod_06_2": "Solo"
+      },
+      {
+        "prod_06_h3": "Water Purifier",
+        "prod_06_3": "RO",
+        "prod_06_3": "RO + UV",
+        "prod_06_3": "RO + UF",
+        "prod_06_3": "RO + UV",
+        "prod_06_3": "RO + UV + UF"
+      },
+      {
+        "prod_06_h4": "Washing Machine",
+        "prod_06_3": "Semi_automatic",
+        "prod_06_3": "Front Loading",
+        "prod_06_3": "Washer Dryer"
+      },
+      {
+        "prod_06_h5": "Dryers",
+        "prod_06_3": "Condenser",
+        "prod_06_3": "Vented"
+      },
+      {
+        "prod_06_h6": "Dish Washers",
+        "prod_06_3": "Free Standing",
+        "prod_06_3": "Built-in"
+      },
+      {
+        "prod_06_h7": "Air Coolers",
+        "prod_06_3": "Tower",
+        "prod_06_3": "Room/Personal"
+      }
+    ]
+  },
+  {
+    "prod_name7": "Home Entertainment",
+    "prod_Id": "07",
+    "prod_list": [
+      {
+        "prod_07_h1": "Televisions",
+        "prod_07_1": "Aisen",
+        "prod_07_1": "LED",
+        "prod_07_1": "Aiwa",
+        "prod_07_1": "Kotak",
+        "prod_07_1": "LG",
+        "prod_07_1": "Samsung",
+        "prod_07_1": "Sony",
+        "prod_07_1": "TCL",
+        "prod_07_1": "VU"
+      },
+      {
+        "prod_07_h2": "Soundbar",
+        "prod_07_2": "Boat",
+        "prod_07_2": "Samsung",
+        "prod_07_2": "LG",
+        "prod_07_2": "JBL"
+      },
+      {
+        "prod_07_h3": "Party Box",
+        "prod_07_3": "Aisen",
+        "prod_07_3": "JBL",
+        "prod_07_3": "LG",
+        "prod_07_3": "Samsung",
+        "prod_07_3": "Sony"
+      },
+      {
+        "prod_07_h4": "Amazon Devices",
+        "prod_07_4": "Fire TV Stick"
+      },
+      {
+        "prod_07_h5": "Home Theater Systems",
+        "prod_07_5": "Aisen",
+        "prod_07_5": "Bose"
+      }
+    ]
+  },
+  {
+    "prod_name8": "Smart Phone",
+    "prod_Id": "08",
+    "prod_list": [
+      {
+        "prod_08_h1": "Apple",
+        "prod_08_1": "Mi",
+        "prod_08_1": "Oppo",
+        "prod_08_1": "Samsung",
+        "prod_08_1": "One plus",
+        "prod_08_1": "Realme",
+        "prod_08_1": "Vivo"
+      }
+    ]
+  },
+  {
+    "prod_name9": "Tablets",
+    "prod_Id": "09",
+    "prod_list": [
+      {
+        "prod_08_h1": "Lenovo",
+        "prod_08_1": "Samsung"
+      }
+    ]
+  }
+]

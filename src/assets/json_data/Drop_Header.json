@@ -1,0 +1,578 @@
+[
+  {
+    "id": 1,
+    "type": " Refrigrator",
+    "brands": [
+      {
+        "id": 10,
+        "brandName": "Frost Free",
+        "products": [
+          {
+            "id": 11,
+            "name": "292 litres"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": " Accessories",
+    "brands": [
+      {
+        "id": 201,
+        "brandName": "Bluetooth Speakers",
+        "products": [
+          {
+            "id": 2011,
+            "name": "Bose"
+          },
+          {
+            "id": 2012,
+            "name": "Saregama"
+          },
+          {
+            "id": 2013,
+            "name": "Infinity"
+          },
+          {
+            "id": 2014,
+            "name": "JBL"
+          },
+          {
+            "id": 2015,
+            "name": "Stuffcool"
+          },
+          {
+            "id": 2016,
+            "name": "Marshall"
+          },
+          {
+            "id": 2017,
+            "name": "Shemaroo"
+          },
+          {
+            "id": 2018,
+            "name": "Google"
+          }
+        ]
+      },
+      {
+        "id": 202,
+        "brandName": "Amazon Device",
+        "products": [
+          {
+            "id": 2021,
+            "name": "Eco Dot"
+          },
+          {
+            "id": 2022,
+            "name": "Eco Show"
+          }
+        ]
+      },
+      {
+        "id": 203,
+        "brandName": "Wired Headphone",
+        "products": [
+          {
+            "id": 2031,
+            "name": "Boat"
+          }
+        ]
+      },
+      {
+        "id": 204,
+        "brandName": "Bluetooth Earphone",
+        "products": [
+          {
+            "id": 2041,
+            "name": ""
+          }
+        ]
+      },
+      {
+        "id": 205,
+        "brandName": "Wired Earphones",
+        "products": [
+          {
+            "id": 2051,
+            "name": ""
+          }
+        ]
+      },
+      {
+        "id": 206,
+        "brandName": "Frame",
+        "products": [
+          {
+            "id": 2061,
+            "name": "Bose"
+          }
+        ]
+      },
+      {
+        "id": 207,
+        "brandName": "Smart Watch",
+        "products": [
+          {
+            "id": 2071,
+            "name": "Boat"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": " Air Conditioner",
+    "brands": [
+      {
+        "id": 301,
+        "brandName": "Window",
+        "products": [
+          {
+            "id": 3011,
+            "name": "0.75 Ton"
+          },
+          {
+            "id": 3012,
+            "name": "1.0 Ton"
+          },
+          {
+            "id": 3013,
+            "name": "1.5 Ton"
+          },
+          {
+            "id": 3014,
+            "name": "2 Ton"
+          }
+        ]
+      },
+      {
+        "id": 302,
+        "brandName": "Split AC",
+        "products": [
+          {
+            "id": 3021,
+            "name": "0.8 Ton"
+          },
+          {
+            "id": 3022,
+            "name": "1.0 Ton"
+          },
+          {
+            "id": 3023,
+            "name": "1.1 Ton"
+          },
+          {
+            "id": 3024,
+            "name": "1.2 Ton"
+          },
+          {
+            "id": 3025,
+            "name": "1.3 Ton"
+          },
+          {
+            "id": 3026,
+            "name": "1.5 Ton"
+          },
+          {
+            "id": 3027,
+            "name": "1.6 Ton"
+          },
+          {
+            "id": 3028,
+            "name": "1.8 Ton"
+          },
+          {
+            "id": 3029,
+            "name": "2.0 Ton"
+          },
+          {
+            "id": 3030,
+            "name": "2.1 Ton"
+          }
+        ]
+      },
+      {
+        "id": 303,
+        "brandName": "Portable",
+        "products": [
+          {
+            "id": 3031,
+            "name": "1.0 Ton"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "Computers",
+    "brands": [
+      {
+        "id": 401,
+        "brandName": "Desktop",
+        "products": [
+          {
+            "id": 4011,
+            "name": "Pentium"
+          },
+          {
+            "id": 4012,
+            "name": "Intel celeron"
+          }
+        ]
+      },
+      {
+        "id": 402,
+        "brandName": "Laptops",
+        "products": [
+          {
+            "id": 4021,
+            "name": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "Game Zone",
+    "brands": [
+      {
+        "id": 501,
+        "brandName": "Sony",
+        "products": [
+          {
+            "id": 5011,
+            "name": "PS4"
+          },
+          {
+            "id": 5012,
+            "name": "PS5"
+          }
+        ]
+      },
+      {
+        "id": 502,
+        "brandName": "Game Accessories",
+        "products": [
+          {
+            "id": 5021,
+            "name": "PS5 Dualscence"
+          },
+          {
+            "id": 5022,
+            "name": "PS5 HD Camera"
+          },
+          {
+            "id": 5023,
+            "name": "PS5 Media Remote"
+          },
+          {
+            "id": 5024,
+            "name": "Play Station Games"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": " Home Appliances",
+    "brands": [
+      {
+        "id": 601,
+        "brandName": "Refrigerator",
+        "products": [
+          {
+            "id": 6011,
+            "name": "Diesct Cool"
+          },
+          {
+            "id": 6012,
+            "name": "Frost Free"
+          },
+          {
+            "id": 6013,
+            "name": "Side-by-side"
+          },
+          {
+            "id": 6014,
+            "name": "Deep Freezer"
+          }
+        ]
+      },
+      {
+        "id": 602,
+        "brandName": "Microwaves",
+        "products": [
+          {
+            "id": 6021,
+            "name": "Solo"
+          }
+        ]
+      },
+      {
+        "id": 603,
+        "brandName": "Water Purifier",
+        "products": [
+          {
+            "id": 6031,
+            "name": "RO"
+          },
+          {
+            "id": 6032,
+            "name": "RO + UV"
+          },
+          {
+            "id": 6033,
+            "name": "RO + UF"
+          },
+          {
+            "id": 6034,
+            "name": "RO + UV"
+          },
+          {
+            "id": 6035,
+            "name": "RO + UV + UF"
+          }
+        ]
+      },
+      {
+        "id": 604,
+        "brandName": "Washing Machine",
+        "products": [
+          {
+            "id": 6041,
+            "name": "Semi_automatic"
+          },
+          {
+            "id": 6042,
+            "name": "Front Loading"
+          },
+          {
+            "id": 6043,
+            "name": "Washer Dryer"
+          }
+        ]
+      },
+      {
+        "id": 605,
+        "brandName": "Dryers",
+        "products": [
+          {
+            "id": 6051,
+            "name": "Condenser"
+          },
+          {
+            "id": 6052,
+            "name": "Vented"
+          }
+        ]
+      },
+      {
+        "id": 606,
+        "brandName": "Dish Washers",
+        "products": [
+          {
+            "id": 6061,
+            "name": "Free Standing"
+          },
+          {
+            "id": 6062,
+            "name": "Built-in"
+          }
+        ]
+      },
+      {
+        "id": 607,
+        "brandName": "Air Coolers",
+        "products": [
+          {
+            "id": 6071,
+            "name": "Tower"
+          },
+          {
+            "id": 6072,
+            "name": "Room/Personal"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "Home Entertainment",
+    "brands": [
+      {
+        "id": 701,
+        "brandName": "Televisions",
+        "products": [
+          {
+            "id": 7011,
+            "name": "Aisen"
+          },
+          {
+            "id": 7012,
+            "name": "LED"
+          },
+          {
+            "id": 7013,
+            "name": "Aiwa"
+          },
+          {
+            "id": 7014,
+            "name": "Kotak"
+          },
+          {
+            "id": 7015,
+            "name": "LG"
+          },
+          {
+            "id": 7016,
+            "name": "Samsung"
+          },
+          {
+            "id": 7017,
+            "name": "Sony"
+          },
+          {
+            "id": 7018,
+            "name": "TCL"
+          },
+          {
+            "id": 7019,
+            "name": "VU"
+          }
+        ]
+      },
+      {
+        "id": 702,
+        "brandName": "Soundbar",
+        "products": [
+          {
+            "id": 7021,
+            "name": "Boat"
+          },
+          {
+            "id": 7022,
+            "name": "Samsung"
+          },
+          {
+            "id": 7023,
+            "name": "LG"
+          },
+          {
+            "id": 7024,
+            "name": "JBL"
+          }
+        ]
+      },
+      {
+        "id": 703,
+        "brandName": "Party Box",
+        "products": [
+          {
+            "id": 7031,
+            "name": "Aisen"
+          },
+          {
+            "id": 7032,
+            "name": "JBL"
+          },
+          {
+            "id": 7033,
+            "name": "LG"
+          },
+          {
+            "id": 7034,
+            "name": "Samsung"
+          },
+          {
+            "id": 7035,
+            "name": "Sony"
+          }
+        ]
+      },
+      {
+        "id": 704,
+        "brandName": "Amazon Devices",
+        "products": [
+          {
+            "id": 7041,
+            "name": "Fire TV Stick"
+          }
+        ]
+      },
+      {
+        "id": 705,
+        "brandName": "Home Theater Systems",
+        "products": [
+          {
+            "id": 7051,
+            "name": "Aisen"
+          },
+          {
+            "id": 7052,
+            "name": "Bose"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "Smart Phone",
+    "brands": [
+      {
+        "id": 801,
+        "brandName": "Apple",
+        "products": [
+          {
+            "id": 8011,
+            "name": "Mi"
+          },
+          {
+            "id": 8012,
+            "name": "Oppo"
+          },
+          {
+            "id": 8013,
+            "name": "Samsung"
+          },
+          {
+            "id": 8014,
+            "name": "One plus"
+          },
+          {
+            "id": 8015,
+            "name": "Realme"
+          },
+          {
+            "id": 8016,
+            "name": "Vivo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "Tablets",
+    "brands": [
+      {
+        "id": 901,
+        "brandName": "Lenovo",
+        "products": [
+          {
+            "id": 9011,
+            "name": "Samsung"
+          }
+        ]
+      }
+    ]
+  }
+]
