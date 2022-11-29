@@ -15,8 +15,8 @@ import Test_Dropdown from "./components/Test_Dropdown";
 function App() {
   return (
     <div className="App">
-      <Test_Dropdown />
-      {/* <Navbar_sub />
+      {/* <Test_Dropdown /> */}
+      <Navbar_sub />
       <MainNav />
       <Routes>
         <Route path="/" element={<Midpage />} />
@@ -28,7 +28,7 @@ function App() {
         <Route path="/contact-us" element={<Contact_us />} />
         <Route path="/cart" element={<Mycart />} />
         <Route path="/search" element={<Product_Category />} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 }

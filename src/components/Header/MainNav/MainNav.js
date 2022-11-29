@@ -12,50 +12,27 @@ import search_ic from "../../../assets/images/search_ic.png";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
+import Drop_Header from "../../../assets/json_data/Drop_Header.json";
 
 function MainNav() {
   const [isHovering, setIsHovering] = useState(false);
+  const [hover, setHover] = useState();
 
-  const handleMouseOver = () => {
+  const handleMouseOver = (e) => {
+    setHover(e);
     setIsHovering(true);
   };
 
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+  console.log(hover);
+
+  const onMouseMove = () => {
+    setIsHovering(true);
+  };
 
   return (
-    // <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-    //   <Container fluid>
-    //     <Navbar.Brand href="#home">
-    //       <img
-    //         src={kohinoor_logo}
-    //         width="200"
-    //         height="60"
-    //         className="d-inline-block align-top"
-    //         alt="React Bootstrap logo"
-    //       />
-    //     </Navbar.Brand>
-    //     <label htmlFor="copy-button">
-    //       <button id="icon1">All Categories &nbsp; &nbsp; &nbsp;</button>
-    //       <input
-    //         name="copy-button"
-    //         aria-label="copy-button"
-    //         placeholder="Search for products, brands & more"
-    //         className="search_input"
-    //       />
-    //       <img id="icon" src={search_ic} alt="icon" />
-    //     </label>
-    //     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    //     <Nav.Link href="#">
-    //       <b>Customer Care &nbsp; &nbsp;</b>
-    //     </Nav.Link>
-    //     <Nav.Link href="#">
-    //       <b>My Cart</b>
-    //     </Nav.Link>
-    //   </Container>
-    // </Navbar>
-
     <Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav1" />
@@ -73,7 +50,6 @@ function MainNav() {
           </Col>
           <Col xs={8}>
             <label htmlFor="copy-button">
-              {/* <button id="icon1">All Categories &nbsp; &nbsp; &nbsp;</button> */}
               <Dropdown id="icon1">
                 <Dropdown.Toggle
                   variant="success"
@@ -83,78 +59,16 @@ function MainNav() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="drop_menu_items_main_nav">
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    REFRIGERATOR
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Accessories
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Air Conditioner
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Computers
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Game Zone
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Home Appliances
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Home Entertainment
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Smart Phone
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="#"
-                    className="drop_items_main_nav"
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                  >
-                    Tablets
-                  </Dropdown.Item>
+                  {Drop_Header.map((items, i) => (
+                    <Dropdown.Item
+                      href="#"
+                      className="drop_items_main_nav"
+                      onMouseOver={() => handleMouseOver(items.id)}
+                      onMouseOut={handleMouseOut}
+                    >
+                      {items.type}
+                    </Dropdown.Item>
+                  ))}
                 </Dropdown.Menu>
               </Dropdown>
               <span className="line_vr_main_nav"></span>
@@ -170,104 +84,51 @@ function MainNav() {
             <div
               className="side_dropdown_main_nav"
               style={isHovering ? { display: "block" } : { display: "none" }}
-              onMouseOver={handleMouseOver}
+              onMouseOver={onMouseMove}
               onMouseOut={handleMouseOut}
             >
-              <Row>
-                <Col
-                  xs={3}
-                  // style={{ height: "100%" }}
-                  className="first_col_dropdown_sub_main_nav"
+              <Row className="main_row">
+                <Row
+                  className="row col-9"
+                  style={{ width: "82%", padding: "13px" }}
                 >
-                  <div>
-                    <h6 className="bluetooth_speakers_h6">
-                      Bluetooth Speakers
-                    </h6>
-                    <hr className="underline_yellow_mainNav_dropdown" />
-                    <ul className="sub_dropdown_ul">
-                      <li className="mainNav_li">Bose</li>
-                      <li className="mainNav_li">Saregama</li>
-                      <li className="mainNav_li">Infinity</li>
-                      <li className="mainNav_li">JBL</li>
-                      <li className="mainNav_li">Stuffcool</li>
-                      <li className="mainNav_li">Marshall</li>
-                      <li className="mainNav_li">Shemaroo</li>
-                      <li className="mainNav_li">Google</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h6 className="bluetooth_speakers_h6">Amazon Device</h6>
-                    <hr className="underline_yellow_mainNav_dropdown" />
-                    <ul className="sub_dropdown_ul">
-                      <li className="mainNav_li">Eco Dot</li>
-                      <li className="mainNav_li">Eco Show</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h6 className="bluetooth_speakers_h6">Wired Headphone</h6>
-                    <hr className="underline_yellow_mainNav_dropdown" />
-                    <ul className="sub_dropdown_ul">
-                      <li className="mainNav_li">Boat</li>
-                    </ul>
-                  </div>
-                </Col>
-                <Col xs={3} className="first_col_dropdown_sub_main_nav">
-                  <div>
-                    <h6 className="bluetooth_speakers_h6">
-                      Bluetooth Earphone
-                    </h6>
-                    <hr className="underline_yellow_mainNav_dropdown" />
-                    <ul className="sub_dropdown_ul">
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h6 className="bluetooth_speakers_h6">Wired Earphones</h6>
-                    <hr className="underline_yellow_mainNav_dropdown" />
-                    <ul className="sub_dropdown_ul">
-                      <li className="mainNav_li2"></li>
-                    </ul>
-                  </div>
-                </Col>
-                <Col xs={3} className="first_col_dropdown_sub_main_nav">
-                  <div>
-                    <h6 className="bluetooth_speakers_h6">Frame</h6>
-                    <hr className="underline_yellow_mainNav_dropdown" />
-                    <ul className="sub_dropdown_ul">
-                      <li className="mainNav_li">Bose</li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                      <li className="mainNav_li2"></li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h6 className="bluetooth_speakers_h6">Smart Watch</h6>
-                    <hr className="underline_yellow_mainNav_dropdown" />
-                    <ul className="sub_dropdown_ul">
-                      <li className="mainNav_li">Boat</li>
-                    </ul>
-                  </div>
-                </Col>
-                <Col xs={3} className="last_col_dropdown_sub_main_nav">
-                  <img
-                    src="https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/filters:quality(70)/images/sample-1_jpg.webp"
-                    alt="img"
-                    className="image_dropdown_mainNav"
-                  />
-                  <button className="mainNav_viewAll">VIEW ALL</button>
-                </Col>
+                  {Drop_Header.map(
+                    (prod, i) =>
+                      hover === prod.id &&
+                      prod.brands.map((list, j) => (
+                        <Col xs={4} className="first_col_dropdown_sub_main_nav">
+                          <h6 className="bluetooth_speakers_h6">
+                            {list.brandName}
+                          </h6>
+                          <hr className="underline_yellow_mainNav_dropdown" />
+                          {list.products.map((myprod, k) => (
+                            <ul className="sub_dropdown_ul">
+                              <li className="mainNav_li">{myprod.name}</li>
+                            </ul>
+                          ))}
+                        </Col>
+                      ))
+                  )}
+                </Row>
+                <div className="col-3">
+                  {Drop_Header.map(
+                    (prod, i) =>
+                      hover === prod.id && (
+                        <Col
+                          xs={3}
+                          className="last_col_dropdown_sub_main_nav"
+                          style={{ position: "relative" }}
+                        >
+                          <img
+                            src={prod.img}
+                            alt="img"
+                            className="image_dropdown_mainNav"
+                          />
+                          <button className="mainNav_viewAll">VIEW ALL</button>
+                        </Col>
+                      )
+                  )}
+                </div>
               </Row>
             </div>
           </Col>
