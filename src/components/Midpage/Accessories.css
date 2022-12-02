@@ -346,3 +346,25 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   align-items: center !important;
   justify-content: center !important;
 }
+
+#new_arrival_bar_true {
+  border-bottom: 2px solid #fed700;
+  color: white !important;
+  font-size: 25px;
+}
+
+#new_arrival_bar_false {
+  /* color: #efc340 !important; */
+  font-size: 25px;
+  /* color: white !important; */
+}
+
+a#color_white_nav {
+  color: #efc340;
+}
+
+.slider_icon_div.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

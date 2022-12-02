@@ -13,6 +13,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
 import Drop_Header from "../../../assets/json_data/Drop_Header.json";
+import headset from "../../../assets/images/headset.png";
+import cart from "../../../assets/images/cart.png";
 
 function MainNav() {
   const [isHovering, setIsHovering] = useState(false);
@@ -64,7 +66,7 @@ function MainNav() {
                       href="#"
                       className="drop_items_main_nav"
                       onMouseOver={() => handleMouseOver(items.id)}
-                      onMouseOut={handleMouseOut}
+                      // onMouseOut={handleMouseOut}
                     >
                       {items.type}
                     </Dropdown.Item>
@@ -92,6 +94,7 @@ function MainNav() {
                   className="row col-9"
                   style={{ width: "82%", padding: "13px" }}
                 >
+                  {/* sushmitha.a@colanonline.com */}
                   {Drop_Header.map(
                     (prod, i) =>
                       hover === prod.id &&
@@ -133,13 +136,15 @@ function MainNav() {
             </div>
           </Col>
 
-          <Col xs={2}>
+          <Col xs={2} className="headset_navbar">
             <Navbar.Collapse id="responsive-navbar-nav1">
               <Nav className="mr-auto">
                 <Nav.Link href="/" className="customer_care_link">
+                  <img src={headset} alt="headset" className="headset_nav" />
                   Customer Care
                 </Nav.Link>
                 <Nav.Link href="/cart" className="my_cart_link">
+                  <img src={cart} alt="headset" className="headset_nav" />
                   My Cart
                 </Nav.Link>
               </Nav>

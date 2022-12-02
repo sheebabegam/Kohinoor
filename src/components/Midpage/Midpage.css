@@ -570,4 +570,12 @@ li.react-multi-carousel-item.react-multi-carousel-item--active {
   align-items: center;
 }
 
+h4.h4_product_brands {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+  color: #fed700;
+  transition: transform 1s, visibility 1s ease-in;
+  background-color: transparent;
+}
 /* Video Carousel */

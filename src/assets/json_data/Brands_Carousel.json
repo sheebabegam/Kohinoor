@@ -1,26 +1,34 @@
 [
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/headphones_lIOg7eq_T3Qatvg.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/headphones_lIOg7eq_T3Qatvg.png",
+    "brand": "headphones"
   },
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/air-conditioner_mtKMV9K.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/air-conditioner_mtKMV9K.png",
+    "brand": "Air conditioner"
   },
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/Gamezone_icon_IvZTNCn.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/Gamezone_icon_IvZTNCn.png",
+    "brand": "Game Zone"
   },
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/computer_HVOgFY3.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/computer_HVOgFY3.png",
+    "brand": "Computer"
   },
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/appliances_rcgkYal.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/appliances_rcgkYal.png",
+    "brand": "Home Appliances"
   },
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/Electronics_icon_wrMaWjZ.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/Electronics_icon_wrMaWjZ.png",
+    "brand": "Home Entertainment"
   },
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/smartphone_qojgxKp.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/smartphone_qojgxKp.png",
+    "brand": "Smart Phone"
   },
   {
-    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/tablet_Fsdm56f.png"
+    "img": "https://d330d33p6rktbx.cloudfront.net/filters:format(webp)/fit-in/120x120/images/tablet_Fsdm56f.png",
+    "brand": "Tablets"
   }
 ]

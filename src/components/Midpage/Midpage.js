@@ -136,7 +136,7 @@ function Midpage() {
                     alt="brands"
                     className="slider_carousel"
                   />
-                  <h4 className="h4_headphones">Headphones</h4>
+                  <h4 className="h4_product_brands">{image.brand}</h4>
                 </div>
               ))}
             </Slider>
@@ -196,8 +196,8 @@ function Midpage() {
 
       {/* ,,,,,,,,,,,,,,,,,,, */}
       <div>
-        <Video_Carousel />
-        <Click_Carousel />
+        {/* <Video_Carousel />
+        <Click_Carousel /> */}
         <Video_Caro />
       </div>
 

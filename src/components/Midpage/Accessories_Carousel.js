@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MainCarousel from "./MainCarousel";
@@ -23,6 +23,21 @@ import Recently_Viewed from "../../assets/json_data/Recently_Viewed.json";
 import { Link } from "react-router-dom";
 
 function Accessories_Carousel() {
+  const [newArrival, setNewArrival] = useState("");
+  const [trending, setTrending] = useState("");
+
+  const setArrival = () => {
+    setNewArrival("Arrival");
+    setTrending("");
+  };
+
+  const setTrend = () => {
+    setTrending("Trend");
+    setNewArrival("");
+  };
+
+  console.log(trending);
+
   const responsive_card = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -47,9 +62,28 @@ function Accessories_Carousel() {
       <div>
         <Navbar bg="dark" variant="dark" expand="lg">
           <Container className="new_arrival_bar_trend">
-            <Nav.Link className="new_arrival_bar1">New Arrivals</Nav.Link>
+            <Nav.Link
+              id={
+                newArrival === "Arrival"
+                  ? "new_arrival_bar_true"
+                  : "new_arrival_bar_false"
+              }
+              // id="color_white_nav"
+              onClick={setArrival}
+            >
+              New Arrivals
+            </Nav.Link>
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <Nav.Link href="#" className="new_arrival_bar1">
+            <Nav.Link
+              href="#"
+              // className="new_arrival_bar1"
+              onClick={setTrend}
+              id={
+                trending === "Trend"
+                  ? "new_arrival_bar_true"
+                  : "new_arrival_bar_false"
+              }
+            >
               Trending
             </Nav.Link>
           </Container>
