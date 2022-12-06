@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useLocation } from "react-router-dom";
 import "./Contact_us.css";
+import Footer from "../../../Footer/Footer";
 
 function Contact_Us() {
   const location = useLocation();
@@ -198,6 +199,7 @@ function Contact_Us() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </div>
   );
 }

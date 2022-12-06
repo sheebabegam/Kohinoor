@@ -12,10 +12,32 @@ import Col from "react-bootstrap/Col";
 import close from "../../../assets/images/close.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import search_ic from "../../../assets/images/search_ic.png";
+import search_canvas from "../../../assets/images/search_canvas.png";
+import geo_alt from "../../../assets/images/geo_alt.svg";
+import close_canvas from "../../../assets/images/close_canvas.png";
+import up_icon from "../../../assets/images/up_icon.png";
 
 function Navbar_sub() {
   const navigate = useNavigate();
   const [login, setLogin] = useState("login");
+  const [city, setCity] = useState("Navi Mumbai");
+
+  const handleMumbai = () => {
+    setCity("Mumbai");
+  };
+
+  const handleThane = () => {
+    setCity("Thane");
+  };
+
+  const handleNaviMumbai = () => {
+    setCity("Navi Mumbai");
+  };
+
+  const handlePune = () => {
+    setCity("Pune");
+  };
 
   const setModalChange = () => {
     setLogin("login");
@@ -24,6 +46,11 @@ function Navbar_sub() {
   const setSignupModalChange = () => {
     setLogin("register");
   };
+
+  const [showLocation, setShowLocation] = useState(false);
+
+  const handleLocationClose = () => setShowLocation(false);
+  const handleshowLocation = () => setShowLocation(true);
 
   const [myotp, setMyOtp] = useState(false);
 
@@ -165,7 +192,11 @@ function Navbar_sub() {
               <Nav.Link href="#" className="border_right" onClick={showSidebar}>
                 Track Your Order
               </Nav.Link>
-              <Nav.Link href="#" className="border_right">
+              <Nav.Link
+                href="#"
+                className="border_right"
+                onClick={handleshowLocation}
+              >
                 <img src={map_png} alt="marker" className="store_locator" />
                 My Location
               </Nav.Link>
@@ -735,12 +766,150 @@ function Navbar_sub() {
             </div>
           )}
         </div>
+
+        <div>
+          <Offcanvas
+            placement="top"
+            show={showLocation}
+            onHide={handleLocationClose}
+            className="location_canvas_main"
+          >
+            <Offcanvas.Header className="location_canvas_header">
+              <Offcanvas.Title className="canvas_flex_title">
+                <div className="close_canvas_img_div">
+                  <img
+                    src={close_canvas}
+                    alt="close"
+                    className="canvas_close_btn"
+                    onClick={handleLocationClose}
+                    style={{ cursor: "pointer" }}
+                  />
+                </div>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body className="canvas_body_location">
+              <Row className="row_location_canvas">
+                <Col xs={2}>
+                  <div className="canvas_pincode">Search by pincode</div>
+                </Col>
+                <Col xs={2}>
+                  <label htmlFor="copy-button">
+                    <span className="line_vr_main_nav"></span>
+                    <input
+                      name="search_canvas"
+                      aria-label="search_canvas"
+                      placeholder="Search your pincode"
+                      className="search_location_canvas"
+                    />
+                    <img id="icon10" src={search_canvas} alt="icon" />
+                  </label>
+                </Col>
+                <Col className="or_canvas" xs={1}>
+                  OR
+                </Col>
+                <Col xs={2}>
+                  <button className="use_current_location_btn">
+                    <img src={geo_alt} alt="geo" id="geo_icon_canvas" />
+                    &nbsp; Use Current Location
+                  </button>
+                </Col>
+              </Row>
+              <br />
+              <br />
+              <div className="all_cities_div">
+                <h3 className="all_cities_h3">All Cities</h3>
+              </div>
+              <div className="city_list_div">
+                <Row className="city_row_canvas">
+                  <Col
+                    xs={1}
+                    onClick={handleMumbai}
+                    className={
+                      city === "Mumbai"
+                        ? "city_name_canvas1"
+                        : "city_name_canvas"
+                    }
+                  >
+                    Mumbai
+                  </Col>
+                  <Col
+                    xs={1}
+                    onClick={handleThane}
+                    className={
+                      city === "Thane"
+                        ? "city_name_canvas1"
+                        : "city_name_canvas"
+                    }
+                  >
+                    Thane
+                  </Col>
+                  <Col
+                    xs={1}
+                    onClick={handleNaviMumbai}
+                    className={
+                      city === "Navi Mumbai"
+                        ? "city_name_canvas1"
+                        : "city_name_canvas"
+                    }
+                  >
+                    Navi Mumbai
+                  </Col>
+                  <Col
+                    xs={1}
+                    onClick={handlePune}
+                    className={
+                      city === "Pune" ? "city_name_canvas1" : "city_name_canvas"
+                    }
+                  >
+                    Pune
+                  </Col>
+                </Row>
+              </div>
+              <br />
+              <br />
+            </Offcanvas.Body>
+            <Navbar
+              collapseOnSelect
+              expand="sm"
+              bg="dark"
+              variant="dark"
+              className="navbar_canvas"
+            >
+              <Container fluid>
+                <Container>
+                  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                  <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto nav_flex">
+                      <Nav.Link href="#" className="link_navi_mumbai">
+                        <label
+                          htmlFor="copy-button"
+                          onClick={handleLocationClose}
+                        >
+                          <input
+                            name="city"
+                            value={city}
+                            className="input_city"
+                            disabled
+                          />
+                          <img
+                            id="icon11"
+                            src={up_icon}
+                            alt="icon"
+                            className="up_icon"
+                            onClick={handleLocationClose}
+                          />
+                        </label>
+                      </Nav.Link>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Container>
+            </Navbar>
+          </Offcanvas>
+        </div>
       </div>
     </>
   );
 }
 
 export default Navbar_sub;
-
-// johny@ypomail.com
-// Johny@123
