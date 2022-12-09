@@ -60,7 +60,7 @@ function Navbar_sub() {
   const [show, setShow] = useState(false);
   const closeSidebar = () => setShow(false);
   const showSidebar = () => setShow(true);
-
+  const [user, setUser] = useState("");
   const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
@@ -107,7 +107,9 @@ function Navbar_sub() {
     await axios
       .post("http://192.168.1.195:5000/login/", formDataLog)
       .then((res) => {
-        console.log(res.data);
+        navigate("/", { state: logEmail });
+        console.log("User email -->", res.data);
+        setUser(logEmail);
       })
       .catch((err) => {
         console.log(err);
@@ -127,7 +129,11 @@ function Navbar_sub() {
     await axios
       .post("http://192.168.1.195:5000/otp-login/", formDataOtp)
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data.msg);
+        console.log(res);
+        if (res.data.msg === "successfully login") {
+          setLogin("login");
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -198,7 +204,7 @@ function Navbar_sub() {
                 onClick={handleshowLocation}
               >
                 <img src={map_png} alt="marker" className="store_locator" />
-                My Location
+                My Location - {user}
               </Nav.Link>
               <Nav.Link href="contact-us" className="border_right">
                 <i
