@@ -81,7 +81,7 @@ function Navbar_sub() {
     formData.append("occupation", occupation);
 
     await axios
-      .post("http://192.168.1.195:5000/signup/", formData)
+      .post("http://192.168.1.195:7000/signup/", formData)
       .then((res) => {
         console.log(res.data);
       })
@@ -105,11 +105,14 @@ function Navbar_sub() {
     formDataLog.append("password", logPassword);
 
     await axios
-      .post("http://192.168.1.195:5000/login/", formDataLog)
+      .post("http://192.168.1.195:7000/login/", formDataLog)
       .then((res) => {
         navigate("/", { state: logEmail });
-        console.log("User email -->", res.data);
-        setUser(logEmail);
+        console.log("User email -->", res.data.details.name);
+
+        localStorage.setItem("name", res.data.details.name);
+        // const name1 = localStorage.getItem("name");
+        // setUser(name1);
       })
       .catch((err) => {
         console.log(err);
@@ -117,6 +120,7 @@ function Navbar_sub() {
 
     console.log("Log-Form data", formDataLog);
   };
+  const name1 = localStorage.getItem("name", name);
 
   const [otp, setOtp] = useState("");
 
@@ -127,7 +131,7 @@ function Navbar_sub() {
     formDataOtp.append("otp", otp);
 
     await axios
-      .post("http://192.168.1.195:5000/otp-login/", formDataOtp)
+      .post("http://192.168.1.195:7000/otp-login/", formDataOtp)
       .then((res) => {
         console.log(res.data.msg);
         console.log(res);
@@ -144,48 +148,10 @@ function Navbar_sub() {
     console.log("Otp-Form data", formDataOtp);
   };
 
+  console.log("USER is", user);
+
   return (
     <>
-      {/* <Navbar variant="dark" sticky="top" className="nav_sub">
-        <Container className="nav_right_align">
-          <Nav className="navigation_main">
-            <ul className="sub_nav_ul">
-              <li className="sub_nav_li">
-                <Nav.Link href="/store-locator">
-                  <img src={map_png} alt="marker" className="store_locator" />{" "}
-                  <b className="line">Store Locator &nbsp; &nbsp;</b>
-                </Nav.Link>
-              </li>
-              <li className="sub_nav_li">
-                <Nav.Link href="#" onClick={showSidebar}>
-                  <b className="line">Track Your Order &nbsp; &nbsp;</b>
-                </Nav.Link>
-              </li>
-              <li className="sub_nav_li">
-                <Nav.Link href="#">
-                  <b className="line">My Location &nbsp; &nbsp;</b>
-                </Nav.Link>
-              </li>
-              <li className="sub_nav_li">
-                <Nav.Link href="contact-us">
-                  <b className="line">Contact Us &nbsp; &nbsp;</b>
-                </Nav.Link>
-              </li>
-              <li className="sub_nav_li">
-                <Nav.Link href="#" onClick={setShowModal}>
-                  <b className="line">Register/Sign in &nbsp; &nbsp;</b>
-                </Nav.Link>
-              </li>
-              <li className="sub_nav_li">
-                <Nav.Link href="#">
-                  <b className="line">Wishlist &nbsp; &nbsp;</b>
-                </Nav.Link>
-              </li>
-            </ul>
-          </Nav>
-        </Container>
-      </Navbar> */}
-
       <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -204,7 +170,8 @@ function Navbar_sub() {
                 onClick={handleshowLocation}
               >
                 <img src={map_png} alt="marker" className="store_locator" />
-                My Location - {user}
+                My Location
+                {/* - {name1} */}
               </Nav.Link>
               <Nav.Link href="contact-us" className="border_right">
                 <i
@@ -214,18 +181,24 @@ function Navbar_sub() {
                 ></i>
                 Contact Us
               </Nav.Link>
-              <Nav.Link
-                href="#"
-                className="border_right"
-                onClick={setShowModal}
-              >
-                <i
-                  class="fa fa-user"
-                  aria-hidden="true"
-                  style={{ marginRight: "5px" }}
-                ></i>
-                Register / Sign in
-              </Nav.Link>
+              {name1 && (
+                <Nav.Link
+                  href="profile"
+                  className="border_right"
+                  id="logout_nav"
+                >
+                  <i
+                    class="fa fa-user"
+                    aria-hidden="true"
+                    style={{ marginRight: "5px" }}
+                  ></i>
+                  Hi, {name1}, &nbsp;
+                  <Nav.Link href="#" className="logout_btn_nav">
+                    Logout
+                  </Nav.Link>
+                </Nav.Link>
+              )}
+
               <Nav.Link href="#" className="border_right">
                 <i class="fa fa-heart-o" style={{ marginRight: "5px" }}></i>
                 Wishlist

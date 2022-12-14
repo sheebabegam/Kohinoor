@@ -11,6 +11,7 @@ import Contact_us from "./components/Header/SubNav/Pages/Contact_us";
 import Mycart from "./components/Header/MainNav/Pages/Mycart";
 import Product_Category from "./components/Midpage/Pages/Product_Category";
 import Test_Dropdown from "./components/Test_Dropdown";
+import Profile_Details from "./components/Header/SubNav/Pages/Profile_Details";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/contact-us" element={<Contact_us />} />
         <Route path="/cart" element={<Mycart />} />
         <Route path="/search" element={<Product_Category />} />
+        <Route path="/profile" element={<Profile_Details />} />
       </Routes>
     </div>
   );

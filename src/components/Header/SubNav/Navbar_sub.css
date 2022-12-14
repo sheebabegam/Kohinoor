@@ -31,6 +31,7 @@ nav.navbar.navbar-expand-sm.navbar-dark.bg-dark {
 a.border_right.nav-link {
   padding: 0;
   border-right: 1px solid #fed700;
+  height: 18px;
 }
 /* .navigation_main.navbar-nav {
   width: 640px;
@@ -680,4 +681,12 @@ nav.navbar_canvas.navbar.navbar-expand-sm.navbar-dark.bg-dark {
   height: 50px;
   width: auto;
   cursor: pointer;
+}
+
+#logout_nav {
+  display: flex;
+}
+
+.logout_btn_nav {
+  margin-top: -8px;
 }

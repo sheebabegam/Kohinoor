@@ -1,0 +1,87 @@
+a.a_tag_link {
+  border-radius: 0;
+  color: #333e48;
+  border-bottom: 1px solid #ecedf2;
+  padding: 0.6rem 0 0.6rem;
+  display: block;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  list-style: none;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333e48;
+  text-align: left;
+  background-color: #fff;
+}
+
+body {
+  background-color: #fff;
+}
+
+h3.profile_details {
+  font-size: 1.00012rem;
+  font-weight: bolder !important;
+  line-height: 1.5;
+  color: #333e48;
+  text-align: left;
+  background-color: #fff;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.details_edit_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #ecedf2;
+}
+
+span.profile_details_span {
+  border-bottom: 2px solid #fed700;
+  padding-bottom: 19px;
+}
+
+.table-striped-columns > :not(caption) > tr > :nth-child(2n) {
+  --bs-table-accent-bg: #fff !important;
+}
+
+button.profile_edit_btn {
+  cursor: pointer;
+  color: #333e48;
+  background-color: #fed700;
+  border-color: #fed700;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+  padding-bottom: 0.5rem !important;
+  padding-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  display: inline-block;
+  font-weight: 700;
+  color: #333e48;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* background-color: transparent; */
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 1.4rem;
+  transition: all 0.2s ease-in-out;
+}
+
+th.th_profile_details {
+  width: 50%;
+}
+
+.nav_profile_edit.container {
+  margin-left: -12px;
+}
