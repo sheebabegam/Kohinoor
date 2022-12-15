@@ -17,11 +17,13 @@ import search_canvas from "../../../assets/images/search_canvas.png";
 import geo_alt from "../../../assets/images/geo_alt.svg";
 import close_canvas from "../../../assets/images/close_canvas.png";
 import up_icon from "../../../assets/images/up_icon.png";
+import { useCookies } from "react-cookie";
 
 function Navbar_sub() {
   const navigate = useNavigate();
   const [login, setLogin] = useState("login");
   const [city, setCity] = useState("Navi Mumbai");
+  const [cookies, setCookies] = useCookies(["user"]);
 
   const handleMumbai = () => {
     setCity("Mumbai");
@@ -109,8 +111,9 @@ function Navbar_sub() {
       .then((res) => {
         navigate("/", { state: logEmail });
         console.log("User email -->", res.data.details.name);
+        setCookies("uname", res.data.details.name, { path: "/" });
 
-        localStorage.setItem("name", res.data.details.name);
+        // localStorage.setItem("name", res.data.details.name);
         // const name1 = localStorage.getItem("name");
         // setUser(name1);
       })
@@ -120,7 +123,8 @@ function Navbar_sub() {
 
     console.log("Log-Form data", formDataLog);
   };
-  const name1 = localStorage.getItem("name", name);
+  console.log(cookies.uname);
+  // const name1 = localStorage.getItem("name", name);
 
   const [otp, setOtp] = useState("");
 
@@ -181,7 +185,7 @@ function Navbar_sub() {
                 ></i>
                 Contact Us
               </Nav.Link>
-              {name1 && (
+              {cookies.uname ? (
                 <Nav.Link
                   href="profile"
                   className="border_right"
@@ -192,10 +196,24 @@ function Navbar_sub() {
                     aria-hidden="true"
                     style={{ marginRight: "5px" }}
                   ></i>
-                  Hi, {name1}, &nbsp;
+                  Hi, {cookies.uname}, &nbsp;
                   <Nav.Link href="#" className="logout_btn_nav">
                     Logout
                   </Nav.Link>
+                </Nav.Link>
+              ) : (
+                <Nav.Link
+                  href="profile"
+                  className="border_right"
+                  id="logout_nav"
+                  onClick={setShowModal}
+                >
+                  <i
+                    class="fa fa-user"
+                    aria-hidden="true"
+                    style={{ marginRight: "5px" }}
+                  ></i>
+                  Register/Login
                 </Nav.Link>
               )}
 

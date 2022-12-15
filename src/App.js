@@ -37,74 +37,52 @@ function App() {
 
 export default App;
 
+// *********************************************************************
+
+// --------------- COOKIES STORAGE ------------------------------------ //
+
 // import React, { useState } from "react";
-// import "./style.css";
-// import Videos from "./assets/json_data/Videos.json";
+// import { useCookies } from "react-cookie";
 
-// export default function App() {
-//   const [value, setValue] = useState("");
-//   // const [value1, setValue1] = useState("Apple");
+// const App = () => {
+//   const [name, setName] = useState("");
+//   const [pwd, setPwd] = useState("");
+//   const [cookies, setCookie] = useCookies(["user"]);
 
-//   const handleChange = (e) => {
-//     setValue(e.target.value);
+//   const handle = () => {
+//     setCookie("Name", name, { path: "/" });
+//     setCookie("Password", pwd, { path: "/" });
 //   };
-
 //   return (
-//     <div>
-//       <h1>Hello StackBlitz!</h1>
-//       <p>Start editing to see some magic happen </p>
-//       <button value="Kohinoor" onClick={handleChange}>
-//         Kohinoor
-//       </button>
-//       <button value="Apple" onClick={handleChange}>
-//         Apple
-//       </button>
-//       <button value="Samsung" onClick={handleChange}>
-//         Samsung
-//       </button>
-//       <button value="JBL" onClick={handleChange}>
-//         JBL
-//       </button>
-//       <button value="One_Plus" onClick={handleChange}>
-//         One_Plus
-//       </button>
-//       {Videos.map((item, i) => (
+//     <div className="App">
+//       <h1>Name of the user:</h1>
+//       <input
+//         placeholder="Name"
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//       />
+//       <h1>Password of the user:</h1>
+//       <input
+//         type="password"
+//         placeholder="Password"
+//         value={pwd}
+//         onChange={(e) => setPwd(e.target.value)}
+//       />
+//       <div>
+//         <button onClick={handle}>Set Cookie</button>{" "}
+//       </div>
+//       <br />
+//       {cookies.Name && (
 //         <div>
-//           {value === item.name && (
-//             <iframe
-//               width="1186"
-//               height="659"
-//               src={item.url}
-//               title={item.title}
-//               frameborder="0"
-//               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//               allowfullscreen
-//             ></iframe>
-//           )}
+//           Name: <p>{cookies.Name}</p>
 //         </div>
-//       ))}
+//       )}
+//       {cookies.Password && (
+//         <div>
+//           Password: <p>{cookies.Password}</p>
+//         </div>
+//       )}
 //     </div>
 //   );
-// }
-
-// import Table from "react-bootstrap/Table";
-
-// function BasicExample() {
-//   return (
-//     <Table>
-//       <tbody>
-//         <tr>
-//           <td>1</td>
-//         </tr>
-//         <tr>
-//           <td>2</td>
-//         </tr>
-//         <tr>
-//           <td>3</td>
-//         </tr>
-//       </tbody>
-//     </Table>
-//   );
-// }
-
-// export default BasicExample;
+// };
+// export default App;
